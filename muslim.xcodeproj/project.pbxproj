@@ -20,6 +20,18 @@
 		AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C22257E38B50008E31D /* SceneDelegate.swift */; };
 		AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA984C2A257E4CDE0008E31D /* LaunchScreen.storyboard */; };
 		AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */; };
+		AA984C48257E62B70008E31D /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C47257E62B70008E31D /* Identifier.swift */; };
+		AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C4C257E63230008E31D /* UIimage+Ext.swift */; };
+		AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA984C51257E64EA0008E31D /* MainClockCell.xib */; };
+		AA984C55257E64F50008E31D /* MainClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C54257E64F50008E31D /* MainClockCell.swift */; };
+		AA984C5C257E67400008E31D /* UIMFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C5B257E67400008E31D /* UIMFont.swift */; };
+		AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C5F257E68650008E31D /* UIMLabelTitle.swift */; };
+		AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C62257E69100008E31D /* UIMLabelBody.swift */; };
+		AA984C67257E693B0008E31D /* UIMColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C66257E693B0008E31D /* UIMColor.swift */; };
+		AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C6A257E6A610008E31D /* String+Ext.swift */; };
+		AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C6D257E6F3E0008E31D /* UIMLabelNote.swift */; };
+		AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C70257E700E0008E31D /* UIColor+Ext.swift */; };
+		AA984C74257E70350008E31D /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C73257E70350008E31D /* Debugger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +50,18 @@
 		AA984C22257E38B50008E31D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA984C2A257E4CDE0008E31D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AA984C47257E62B70008E31D /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		AA984C4C257E63230008E31D /* UIimage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+Ext.swift"; sourceTree = "<group>"; };
+		AA984C51257E64EA0008E31D /* MainClockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainClockCell.xib; sourceTree = "<group>"; };
+		AA984C54257E64F50008E31D /* MainClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainClockCell.swift; sourceTree = "<group>"; };
+		AA984C5B257E67400008E31D /* UIMFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMFont.swift; sourceTree = "<group>"; };
+		AA984C5F257E68650008E31D /* UIMLabelTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMLabelTitle.swift; sourceTree = "<group>"; };
+		AA984C62257E69100008E31D /* UIMLabelBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMLabelBody.swift; sourceTree = "<group>"; };
+		AA984C66257E693B0008E31D /* UIMColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMColor.swift; sourceTree = "<group>"; };
+		AA984C6A257E6A610008E31D /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		AA984C6D257E6F3E0008E31D /* UIMLabelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMLabelNote.swift; sourceTree = "<group>"; };
+		AA984C70257E700E0008E31D /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		AA984C73257E70350008E31D /* Debugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
 		DFA87B65178B0D54D6B617EA /* Pods-muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.debug.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D781C48D2CD6162E6F581 /* Pods-muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.release.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +116,9 @@
 		AA984BC0257E1B560008E31D /* muslim */ = {
 			isa = PBXGroup;
 			children = (
+				AA984C57257E66DD0008E31D /* app-muslimkit */,
+				AA984C4B257E630D0008E31D /* app-extension */,
+				AA984C46257E62A60008E31D /* app-common */,
 				AA984C0D257E35840008E31D /* app-feature */,
 				AA984BCF257E1B560008E31D /* Info.plist */,
 				AA984C0A257E34F30008E31D /* app-support */,
@@ -123,6 +150,7 @@
 		AA984C0E257E358E0008E31D /* feature-main */ = {
 			isa = PBXGroup;
 			children = (
+				AA984C50257E64AA0008E31D /* cell */,
 				AA984C0F257E35A90008E31D /* MainPresenter.swift */,
 				AA984C10257E35A90008E31D /* MainRouter.swift */,
 				AA984C11257E35A90008E31D /* MainProtocols.swift */,
@@ -131,6 +159,70 @@
 				AA984C14257E35A90008E31D /* MainView.xib */,
 			);
 			path = "feature-main";
+			sourceTree = "<group>";
+		};
+		AA984C46257E62A60008E31D /* app-common */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C47257E62B70008E31D /* Identifier.swift */,
+				AA984C73257E70350008E31D /* Debugger.swift */,
+			);
+			path = "app-common";
+			sourceTree = "<group>";
+		};
+		AA984C4B257E630D0008E31D /* app-extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C4C257E63230008E31D /* UIimage+Ext.swift */,
+				AA984C6A257E6A610008E31D /* String+Ext.swift */,
+				AA984C70257E700E0008E31D /* UIColor+Ext.swift */,
+			);
+			path = "app-extension";
+			sourceTree = "<group>";
+		};
+		AA984C50257E64AA0008E31D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C51257E64EA0008E31D /* MainClockCell.xib */,
+				AA984C54257E64F50008E31D /* MainClockCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		AA984C57257E66DD0008E31D /* app-muslimkit */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C65257E69260008E31D /* UIMColor */,
+				AA984C5A257E672C0008E31D /* UIMFont */,
+				AA984C58257E66E80008E31D /* UIMLabel */,
+			);
+			path = "app-muslimkit";
+			sourceTree = "<group>";
+		};
+		AA984C58257E66E80008E31D /* UIMLabel */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C5F257E68650008E31D /* UIMLabelTitle.swift */,
+				AA984C62257E69100008E31D /* UIMLabelBody.swift */,
+				AA984C6D257E6F3E0008E31D /* UIMLabelNote.swift */,
+			);
+			path = UIMLabel;
+			sourceTree = "<group>";
+		};
+		AA984C5A257E672C0008E31D /* UIMFont */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C5B257E67400008E31D /* UIMFont.swift */,
+			);
+			path = UIMFont;
+			sourceTree = "<group>";
+		};
+		AA984C65257E69260008E31D /* UIMColor */ = {
+			isa = PBXGroup;
+			children = (
+				AA984C66257E693B0008E31D /* UIMColor.swift */,
+			);
+			path = UIMColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
+				AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */,
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
 				AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */,
@@ -267,13 +360,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
+				AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */,
+				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
+				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
+				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,
 				AA984C17257E35A90008E31D /* MainProtocols.swift in Sources */,
+				AA984C55257E64F50008E31D /* MainClockCell.swift in Sources */,
 				AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */,
 				AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */,
 				AA984C1D257E35C80008E31D /* Engine.swift in Sources */,
+				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
+				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
+				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
+				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
+				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
 				AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

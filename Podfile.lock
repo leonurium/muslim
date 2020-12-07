@@ -1,4 +1,5 @@
 PODS:
+  - Adhan (1.2.0)
   - Firebase/Analytics (7.1.0):
     - Firebase/Core
   - Firebase/Core (7.1.0):
@@ -75,6 +76,7 @@ PODS:
   - Siren (5.6.2)
 
 DEPENDENCIES:
+  - Adhan
   - Firebase/Analytics
   - Firebase/Crashlytics
   - IQKeyboardManagerSwift
@@ -82,6 +84,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Adhan
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -97,6 +100,7 @@ SPEC REPOS:
     - Siren
 
 SPEC CHECKSUMS:
+  Adhan: 3cd2cd98044266acd7ed3221afe3829ef779ec8e
   Firebase: 78e8dd2e39d653de6270432ad84fe8b59f7bf4e8
   FirebaseAnalytics: 7f165a56dea86ddd5b8ce02af3bee982c683405c
   FirebaseCore: 20046127eef0fcb8fa25df7fc12f7b97d4e48611
@@ -111,6 +115,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Siren: 4f98be44f7d66e80513dc3e7061898cd63935bd5
 
-PODFILE CHECKSUM: 04ee7e90707beb4a287fdd9a531545d1b507e4ad
+PODFILE CHECKSUM: f746d5d17a68b92959234b299319cc83ffe5da47
 
 COCOAPODS: 1.10.0

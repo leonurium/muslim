@@ -29,8 +29,18 @@ class MainView: UIViewController, MainPresenterToView {
     
     func setupViews() {
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
         tableview.dataSource = self
         tableview.delegate = self
+        tableview.separatorStyle = .none
+        
+        let imageView = UIImageView()
+        imageView.image = UIImage(identifierName: .image_background_1)
+        tableview.backgroundView = imageView
     }
 }
 
