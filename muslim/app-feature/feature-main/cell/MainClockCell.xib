@@ -9,30 +9,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="203" id="KFT-eN-MYQ" customClass="MainClockCell" customModule="muslim" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KFT-eN-MYQ" customClass="MainClockCell" customModule="muslim" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KFT-eN-MYQ" id="k6U-1V-al6">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="203"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5A2-Vw-DjF">
-                        <rect key="frame" x="186" y="72" width="41.5" height="77.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5A2-Vw-DjF">
+                        <rect key="frame" x="16" y="24" width="382" height="155"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8T-cn-ud4">
-                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8T-cn-ud4" customClass="UIMLabelBody" customModule="muslim" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z86-1K-VBa">
-                                <rect key="frame" x="0.0" y="28.5" width="41.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z86-1K-VBa" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="67.5" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-ZQ-Kb4">
-                                <rect key="frame" x="0.0" y="57" width="41.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-ZQ-Kb4" customClass="UIMLabelNote" customModule="muslim" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="134.5" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +40,21 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5A2-Vw-DjF" secondAttribute="bottom" constant="24" id="7J7-5p-B9c"/>
+                    <constraint firstItem="5A2-Vw-DjF" firstAttribute="centerX" secondItem="k6U-1V-al6" secondAttribute="centerX" id="KA2-6w-cfw"/>
+                    <constraint firstItem="5A2-Vw-DjF" firstAttribute="centerY" secondItem="k6U-1V-al6" secondAttribute="centerY" id="UHW-kC-LVI"/>
+                    <constraint firstItem="5A2-Vw-DjF" firstAttribute="leading" secondItem="k6U-1V-al6" secondAttribute="leading" constant="16" id="bx1-2v-eA7"/>
+                    <constraint firstItem="5A2-Vw-DjF" firstAttribute="top" secondItem="k6U-1V-al6" secondAttribute="top" constant="24" id="pzf-Ax-SIn"/>
+                    <constraint firstAttribute="trailing" secondItem="5A2-Vw-DjF" secondAttribute="trailing" constant="16" id="z4H-7A-Kcq"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="container_view" destination="5A2-Vw-DjF" id="zkB-8k-aGr"/>
+                <outlet property="lbl_date" destination="d5m-ZQ-Kb4" id="d4r-Dj-UZU"/>
+                <outlet property="lbl_remaining_time" destination="L8T-cn-ud4" id="t7G-AR-UcE"/>
+                <outlet property="lbl_time" destination="z86-1K-VBa" id="BYM-xL-dVP"/>
+            </connections>
             <point key="canvasLocation" x="-226" y="58"/>
         </tableViewCell>
     </objects>

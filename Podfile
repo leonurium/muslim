@@ -11,5 +11,7 @@ target 'muslim' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'SPPermissions'
+  pod 'SPPermissions/Location'
 
 end

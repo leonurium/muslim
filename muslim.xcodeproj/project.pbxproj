@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71A50267299B7BF02B2636EE /* Pods_muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E428D03E8A27E49315D8B /* Pods_muslim.framework */; };
+		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
 		AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984BC1257E1B560008E31D /* AppDelegate.swift */; };
 		AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA984BCA257E1B560008E31D /* Assets.xcassets */; };
 		AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C0F257E35A90008E31D /* MainPresenter.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		971E428D03E8A27E49315D8B /* Pods_muslim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_muslim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		AA984BBE257E1B560008E31D /* muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muslim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA984BC1257E1B560008E31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA984BCA257E1B560008E31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				AA984C47257E62B70008E31D /* Identifier.swift */,
 				AA984C73257E70350008E31D /* Debugger.swift */,
+				AA0503B8257F8CD9007A1CD4 /* Parser.swift */,
 			);
 			path = "app-common";
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				AA984C55257E64F50008E31D /* MainClockCell.swift in Sources */,
 				AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */,
 				AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */,
+				AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */,
 				AA984C1D257E35C80008E31D /* Engine.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,

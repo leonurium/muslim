@@ -7,11 +7,13 @@
 
 import UIKit
 
+// name color on https://chir.ag/projects/name-that-color/
+
 enum UIMColor: String {
-    case dove_gray = "696969"
-    case mine_shaft = "333333"
-    case white = "FFFFFF"
-    case alto = "D6D6D6"
+    case dove_gray = "696969" // gray dark
+    case mine_shaft = "333333" // black
+    case white = "FFFFFF" // white
+    case alto = "D6D6D6" // gray light
         
     func get() -> UIColor {
         return self.rawValue.hexToUIColor()
