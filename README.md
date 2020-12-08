@@ -1,5 +1,5 @@
 ## muslim
-open-source muslim-app-ios for better live
+open-source muslim-app-ios for better live, and also you can feel free to audit source code for illegal things (?), we are respect and honor to keep user's security and their privacy.
 
 ### To Do
 - [ ] Banyak
