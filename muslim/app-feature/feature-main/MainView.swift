@@ -46,6 +46,10 @@ class MainView: UIViewController, MainPresenterToView {
         imageView.image = UIImage(identifierName: .image_background_2)
         tableview.backgroundView = imageView
     }
+    
+    func reloadTableView() {
+        tableview.reloadData()
+    }
 }
 
 extension MainView: UITableViewDelegate, UITableViewDataSource {

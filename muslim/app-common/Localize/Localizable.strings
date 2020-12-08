@@ -15,3 +15,4 @@
 // MARK: - Error
 "something_wrong" = "Looks like something went wrong";
 "not_found_current_location" = "Failed get current location, make sure you allow location on this App";
+"fail_get_prayer_times" = "Looks like something went wrong, can't get prayer times";

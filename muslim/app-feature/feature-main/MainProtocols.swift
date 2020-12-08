@@ -13,6 +13,7 @@ protocol MainPresenterToView: class {
     var presenter: MainViewToPresenter? { get set }
     
     func setupViews()
+    func reloadTableView()
 }
 
 // MARK: Interactor -
@@ -36,7 +37,7 @@ protocol MainViewToPresenter: class {
     
     func didLoad()
     func numberOfRowsInSection() -> Int
-    func cellForRowAt(indexPath: IndexPath)
+    func cellForRowClockCell()
 }
 
 protocol MainInteractorToPresenter: class {

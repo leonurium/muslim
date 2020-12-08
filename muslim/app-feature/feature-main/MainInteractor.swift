@@ -28,13 +28,14 @@ class MainInteractor: MainPresenterToInteractor {
 //                formatter.timeZone = TimeZone(identifier: "Asia/Jakarta")!
 
                 let times = MuslimPrayerTimes(fajr: prayers.fajr, sunrise: prayers.sunrise, dhuhr: prayers.dhuhr, asr: prayers.asr, maghrib: prayers.maghrib, isha: prayers.isha)
+                presenter?.didGetPrayerTimes(times: times)
             
             } else {
-                
+                presenter?.failGetPrayerTimes(title: LTitleAlert.error.localized, message: LError.fail_get_prayer_times.localized)
             }
             
         } else {
-            
+            presenter?.failGetPrayerTimes(title: LTitleAlert.error.localized, message: LError.not_found_current_location.localized)
         }
     }
         

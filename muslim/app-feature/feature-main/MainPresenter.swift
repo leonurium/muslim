@@ -12,20 +12,29 @@ class MainPresenter: MainViewToPresenter {
     var interactor: MainPresenterToInteractor?
     var router: MainPresenterToRouter?
     
+    private var times: MuslimPrayerTimes?
+    
     func didLoad() {
         view?.setupViews()
         interactor?.getPrayerTimes()
     }
     
     func numberOfRowsInSection() -> Int {
-        return 0
+        return 1
     }
     
-    func cellForRowAt(indexPath: IndexPath) {
+    func cellForRowClockCell() {
         
     }
 }
 
 extension MainPresenter: MainInteractorToPresenter {
+    func didGetPrayerTimes(times: MuslimPrayerTimes) {
+        self.times = times
+        view?.reloadTableView()
+    }
     
+    func failGetPrayerTimes(title: String, message: String) {
+        
+    }
 }

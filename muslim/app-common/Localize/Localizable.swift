@@ -18,7 +18,7 @@ enum Localizable {
     enum Error: String, LocalizableDelegate {
         case something_wrong
         case not_found_current_location
-        case fail_get_prayer_times = "something_wrong"
+        case fail_get_prayer_times
     }
 }
 
