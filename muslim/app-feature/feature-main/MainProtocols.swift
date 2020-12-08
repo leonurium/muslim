@@ -40,4 +40,6 @@ protocol MainViewToPresenter: class {
 }
 
 protocol MainInteractorToPresenter: class {
+    func didGetPrayerTimes(times: MuslimPrayerTimes)
+    func failGetPrayerTimes(title: String, message: String)
 }

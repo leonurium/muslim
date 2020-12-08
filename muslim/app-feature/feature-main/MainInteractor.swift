@@ -28,7 +28,13 @@ class MainInteractor: MainPresenterToInteractor {
 //                formatter.timeZone = TimeZone(identifier: "Asia/Jakarta")!
 
                 let times = MuslimPrayerTimes(fajr: prayers.fajr, sunrise: prayers.sunrise, dhuhr: prayers.dhuhr, asr: prayers.asr, maghrib: prayers.maghrib, isha: prayers.isha)
+            
+            } else {
+                
             }
+            
+        } else {
+            
         }
     }
         

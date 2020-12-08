@@ -34,6 +34,9 @@
 		AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C70257E700E0008E31D /* UIColor+Ext.swift */; };
 		AA984C74257E70350008E31D /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C73257E70350008E31D /* Debugger.swift */; };
 		AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99AAFE257FC50C0050C92D /* MuslimPrayerTimes.swift */; };
+		AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99AB05257FC9500050C92D /* LocalizableDelegate.swift */; };
+		AA99AB09257FC9750050C92D /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99AB08257FC9750050C92D /* Localizable.swift */; };
+		AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA99AB0F257FCDF00050C92D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		AA984C70257E700E0008E31D /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		AA984C73257E70350008E31D /* Debugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
 		AA99AAFE257FC50C0050C92D /* MuslimPrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerTimes.swift; sourceTree = "<group>"; };
+		AA99AB05257FC9500050C92D /* LocalizableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableDelegate.swift; sourceTree = "<group>"; };
+		AA99AB08257FC9750050C92D /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		AA99AB0F257FCDF00050C92D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		DFA87B65178B0D54D6B617EA /* Pods-muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.debug.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D781C48D2CD6162E6F581 /* Pods-muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.release.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +175,7 @@
 		AA984C46257E62A60008E31D /* app-common */ = {
 			isa = PBXGroup;
 			children = (
+				AA99AB01257FC8FB0050C92D /* Localize */,
 				AA984C47257E62B70008E31D /* Identifier.swift */,
 				AA984C73257E70350008E31D /* Debugger.swift */,
 				AA0503B8257F8CD9007A1CD4 /* Parser.swift */,
@@ -239,6 +246,16 @@
 			path = "feature-app-service";
 			sourceTree = "<group>";
 		};
+		AA99AB01257FC8FB0050C92D /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				AA99AB05257FC9500050C92D /* LocalizableDelegate.swift */,
+				AA99AB08257FC9750050C92D /* Localizable.swift */,
+				AA99AB0F257FCDF00050C92D /* Localizable.strings */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
+				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
 				AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */,
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
@@ -376,6 +394,7 @@
 			files = (
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
+				AA99AB09257FC9750050C92D /* Localizable.swift in Sources */,
 				AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */,
 				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
 				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
@@ -395,6 +414,7 @@
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
 				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
 				AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */,
+				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,17 @@
+/*
+  Localizable.strings
+  muslim
+
+  Created by Rangga Leo on 08/12/20.
+  
+*/
+
+// MARK: - Tittle Alert
+"information" = "Information";
+"success" = "Alhamdulillah!";
+"warning" = "Warning";
+"Error" = "Oops!";
+
+// MARK: - Error
+"something_wrong" = "Looks like something went wrong";
+"not_found_current_location" = "Failed get current location, make sure you allow location on this App";
