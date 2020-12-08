@@ -14,6 +14,7 @@ class MainPresenter: MainViewToPresenter {
     
     func didLoad() {
         view?.setupViews()
+        interactor?.getPrayerTimes()
     }
     
     func numberOfRowsInSection() -> Int {

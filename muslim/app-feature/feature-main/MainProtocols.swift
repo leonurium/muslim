@@ -18,6 +18,8 @@ protocol MainPresenterToView: class {
 // MARK: Interactor -
 protocol MainPresenterToInteractor: class {
     var presenter: MainInteractorToPresenter?  { get set }
+    
+    func getPrayerTimes()
 }
 
 
