@@ -16,22 +16,18 @@ class MainInteractor: MainPresenterToInteractor {
     func getPrayerTimes() {
         let cal = Calendar(identifier: Calendar.Identifier.iso8601)
         let date = cal.dateComponents([.year, .month, .day], from: Date())
-        debugLog(locationManager.location?.coordinate)
+        
         if let currentLoc = locationManager.location?.coordinate {
             let coordinates = Coordinates(latitude: currentLoc.latitude, longitude: currentLoc.longitude)
             var params = CalculationMethod.moonsightingCommittee.params
             params.madhab = .hanafi
+            
             if let prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params) {
-                let formatter = DateFormatter()
-                formatter.timeStyle = .long
+//                let formatter = DateFormatter()
+//                formatter.timeStyle = .long
 //                formatter.timeZone = TimeZone(identifier: "Asia/Jakarta")!
 
-                print("fajr \(formatter.string(from: prayers.fajr))")
-                print("sunrise \(formatter.string(from: prayers.sunrise))")
-                print("dhuhr \(formatter.string(from: prayers.dhuhr))")
-                print("asr \(formatter.string(from: prayers.asr))")
-                print("maghrib \(formatter.string(from: prayers.maghrib))")
-                print("isha \(formatter.string(from: prayers.isha))")
+                let times = MuslimPrayerTimes(fajr: prayers.fajr, sunrise: prayers.sunrise, dhuhr: prayers.dhuhr, asr: prayers.asr, maghrib: prayers.maghrib, isha: prayers.isha)
             }
         }
     }

@@ -33,6 +33,7 @@
 		AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C6D257E6F3E0008E31D /* UIMLabelNote.swift */; };
 		AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C70257E700E0008E31D /* UIColor+Ext.swift */; };
 		AA984C74257E70350008E31D /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C73257E70350008E31D /* Debugger.swift */; };
+		AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99AAFE257FC50C0050C92D /* MuslimPrayerTimes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		AA984C6D257E6F3E0008E31D /* UIMLabelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMLabelNote.swift; sourceTree = "<group>"; };
 		AA984C70257E700E0008E31D /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		AA984C73257E70350008E31D /* Debugger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
+		AA99AAFE257FC50C0050C92D /* MuslimPrayerTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuslimPrayerTimes.swift; sourceTree = "<group>"; };
 		DFA87B65178B0D54D6B617EA /* Pods-muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.debug.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D781C48D2CD6162E6F581 /* Pods-muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.release.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 		AA984C0D257E35840008E31D /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				AA99AAFD257FC4E60050C92D /* feature-app-service */,
 				AA984C0E257E358E0008E31D /* feature-main */,
 			);
 			path = "app-feature";
@@ -226,6 +229,14 @@
 				AA984C66257E693B0008E31D /* UIMColor.swift */,
 			);
 			path = UIMColor;
+			sourceTree = "<group>";
+		};
+		AA99AAFD257FC4E60050C92D /* feature-app-service */ = {
+			isa = PBXGroup;
+			children = (
+				AA99AAFE257FC50C0050C92D /* MuslimPrayerTimes.swift */,
+			);
+			path = "feature-app-service";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +389,7 @@
 				AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */,
 				AA984C1D257E35C80008E31D /* Engine.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
+				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
 				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
