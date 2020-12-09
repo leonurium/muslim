@@ -39,6 +39,7 @@ protocol MainViewToPresenter: class {
     func didLoad()
     func numberOfRowsInSection() -> Int
     func cellForRowClock() -> MainClock?
+    func cellForRowTimeTable() -> MainTimeTable?
 }
 
 protocol MainInteractorToPresenter: class {

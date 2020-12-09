@@ -41,6 +41,7 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.delegate = self
         tableview.separatorStyle = .none
         tableview.register(MainClockCell.source.nib, forCellReuseIdentifier: MainClockCell.source.identifier)
+        tableview.register(MainTimeTableCell.source.nib, forCellReuseIdentifier: MainTimeTableCell.source.identifier)
         
         let imageView = UIImageView()
         imageView.image = UIImage(identifierName: .image_background_2)
@@ -60,15 +61,32 @@ class MainView: UIViewController, MainPresenterToView {
 
 extension MainView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return presenter?.numberOfRowsInSection() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: MainClockCell.source.identifier) as? MainClockCell {
+        if
+            indexPath.row == 0,
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainClockCell.source.identifier) as? MainClockCell {
             cell.data = presenter?.cellForRowClock()
             return cell
         }
+        
+        if
+            indexPath.row == 1,
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainTimeTableCell.source.identifier) as? MainTimeTableCell {
+            cell.timeTable = presenter?.cellForRowTimeTable()
+            cell.delegate = self
+            return cell
+        }
+        
         return UITableViewCell()
+    }
+}
+
+extension MainView: MainTimeTableCellDelegate {
+    func didTapItem(index: Int, cell: MainTimeTableCell) {
+        debugLog(index)
     }
 }
 

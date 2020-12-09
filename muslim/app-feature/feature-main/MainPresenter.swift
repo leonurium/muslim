@@ -16,7 +16,7 @@ class MainPresenter: MainViewToPresenter {
     private var timer: Timer?
     private var remaining: Int = 0
     private var isPlus: Bool = false
-    private var shouldCurrentPrayer: MuslimPrayer?
+    private var currentMainClock: MainClock?
     
     func didLoad() {
         view?.setupViews()
@@ -24,7 +24,7 @@ class MainPresenter: MainViewToPresenter {
     }
     
     func numberOfRowsInSection() -> Int {
-        return 1
+        return 2
     }
     
     func cellForRowClock() -> MainClock? {
@@ -50,7 +50,6 @@ class MainPresenter: MainViewToPresenter {
             var shouldDisplayCountdown: String = ""
             
             if (now.timeIntervalSince(currentPrayerTime) / 60) >= TimeIntervalConstant.limit_value_between_prayer.rawValue {
-                self.shouldCurrentPrayer = nextPrayer
                 isPlus = false
                 remaining = Int(nextPrayerTime.timeIntervalSince(now))
                 let (hour, minute, second) = remaining.secondsToHoursMinutesSeconds()
@@ -60,7 +59,6 @@ class MainPresenter: MainViewToPresenter {
                 shouldDisplayCountdown = String(format: StringConstant.format_remainig_time_minus.rawValue, hour, minute, second)
                 
             } else {
-                self.shouldCurrentPrayer = currentPrayer
                 isPlus = true
                 remaining = Int(now.timeIntervalSince(currentPrayerTime))
                 let (hour, minute, second) = remaining.secondsToHoursMinutesSeconds()
@@ -74,9 +72,29 @@ class MainPresenter: MainViewToPresenter {
                 timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(didChangeTimeInterval), userInfo: nil, repeats: true)
             }
             let clock = MainClock(prayerName: shouldDisplayCurrentPrayer, current: shouldDisplayCurrentPrayerTime, remaining: shouldDisplayCountdown, date: shouldDisplayDate)
+            currentMainClock = clock
             return clock
         }
         
+        return currentMainClock
+    }
+    
+    func cellForRowTimeTable() -> MainTimeTable? {
+        if
+            let prayerTimes = times,
+            let currentPrayer = prayerTimes.currentPrayer() {
+            
+            var finalPrayers: [MainTimeTablePrayerAndTimes] = []
+            let prayers = MuslimPrayer.allCases
+            for prayer in prayers {
+                let time = prayerTimes.time(for: prayer)
+                let tmpPrayer = MainTimeTablePrayerAndTimes(prayer: prayer, time: time)
+                finalPrayers.append(tmpPrayer)
+            }
+            
+            let timeTable = MainTimeTable(prayers: finalPrayers, currentPrayer: currentPrayer)
+            return timeTable
+        }
         return nil
     }
     

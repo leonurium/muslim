@@ -7,6 +7,20 @@
 
 import UIKit
 
+struct MainTimeTablePrayerAndTimes {
+    let prayer: MuslimPrayer
+    let time: Date
+}
+
+struct MainTimeTable {
+    let prayers: [MainTimeTablePrayerAndTimes]
+    let currentPrayer: MuslimPrayer
+}
+
+protocol MainTimeTableCellDelegate: class {
+    func didTapItem(index: Int, cell: MainTimeTableCell)
+}
+
 class MainTimeTableCell: UITableViewCell {
     
     @IBOutlet weak var container_round: UIView!
@@ -17,13 +31,13 @@ class MainTimeTableCell: UITableViewCell {
         static var identifier: String = String(describing: MainTimeTableCell.self)
     }
     
-    var prayers: MuslimPrayerTimes? {
+    var timeTable: MainTimeTable? {
         didSet {
             updateUI()
         }
     }
     
-    var currentPrayer: MuslimPrayer?
+    weak var delegate: MainTimeTableCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,27 +56,59 @@ class MainTimeTableCell: UITableViewCell {
         container_round.layer.shadowRadius = 10.0
         container_round.layer.shadowOpacity = 30.0
         container_round.layer.masksToBounds = false
+        container_round.backgroundColor = UIMColor.mine_shaft.get().withAlphaComponent(0.3)
+        container_round.backgroundColor = .clear
         
         container_view.backgroundColor = .clear
-        container_view.spacing = 0
+        container_view.spacing = 8
         container_view.distribution = .fill
     }
     
     private func updateUI() {
-        let prayers = MuslimPrayer.allCases
-        for prayer in prayers {
-            if prayer == currentPrayer {
-                let btn_prayer = UIMLabelTitle()
-                btn_prayer.textColor = UIMColor.mine_shaft.get()
-                btn_prayer.setFontSize(14)
-                btn_prayer.textAlignment = .left
+        guard let main = timeTable else { return }
+        
+        for prayer in main.prayers {
+            guard let index = main.prayers.firstIndex(where: { String(describing: $0.prayer) == String(describing: prayer.prayer) }) else { return }
+            
+            let lbl_prayer = UIMLabelBody()
+            lbl_prayer.text = String(describing: prayer.prayer).capitalized
+            lbl_prayer.textColor = UIMColor.white.get()
+            lbl_prayer.setFontSize(18)
+            lbl_prayer.textAlignment = .left
+            lbl_prayer.tag = index
+            lbl_prayer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(itemClicked(_:))))
+            
+            let lbl_time = UIMLabelBody()
+            lbl_time.textColor = UIMColor.white.get()
+            lbl_time.setFontSize(18)
+            lbl_time.textAlignment = .right
+            lbl_time.tag = index
+            lbl_time.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(itemClicked(_:))))
+            let formatter = DateFormatter()
+            formatter.timeStyle = .short
+            lbl_time.text = formatter.string(from: prayer.time)
+            
+            if prayer.prayer == main.currentPrayer {
+                lbl_prayer.textColor = UIMColor.buttercup.get()
+                lbl_prayer.makeBold()
                 
-            } else {
-                let btn_prayer = UIMLabelBody()
-                btn_prayer.textColor = UIMColor.mine_shaft.get()
-                btn_prayer.setFontSize(14)
-                btn_prayer.textAlignment = .left
+                lbl_time.textColor = UIMColor.buttercup.get()
+                lbl_time.makeBold()
             }
+            
+            let stack = UIStackView()
+            stack.spacing = 8
+            stack.distribution = .fillEqually
+            stack.axis = .horizontal
+            stack.backgroundColor = .clear
+            stack.addArrangedSubview(lbl_prayer)
+            stack.addArrangedSubview(lbl_time)
+            
+            container_view.addArrangedSubview(stack)
         }
+    }
+    
+    @objc private func itemClicked(_ sender: UIView) {
+        delegate?.didTapItem(index: sender.tag, cell: self)
     }
 }

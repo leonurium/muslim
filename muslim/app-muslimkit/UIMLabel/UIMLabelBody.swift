@@ -33,4 +33,9 @@ class UIMLabelBody: UILabel {
     public func setFontSize(_ size: CGFloat) {
         fontSize = size
     }
+    
+    public func makeBold() {
+        let size_font: CGFloat  = self.font.pointSize
+        font = UIMFont.heavy.size(size_font)
+    }
 }

@@ -14,6 +14,7 @@ enum UIMColor: String {
     case mine_shaft = "333333" // black
     case white = "FFFFFF" // white
     case alto = "D6D6D6" // gray light
+    case buttercup = "F0BE0C" // orange
         
     func get() -> UIColor {
         return self.rawValue.hexToUIColor()
