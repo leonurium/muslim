@@ -50,6 +50,12 @@ class MainView: UIViewController, MainPresenterToView {
     func reloadTableView() {
         tableview.reloadData()
     }
+    
+    func updateIntevalView(remaining: String) {
+        if let cell = tableview.cellForRow(at: IndexPath(row: 0, section: 0)) as? MainClockCell {
+            cell.updateIntervalView(newInterval: remaining)
+        }
+    }
 }
 
 extension MainView: UITableViewDelegate, UITableViewDataSource {
@@ -59,6 +65,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: MainClockCell.source.identifier) as? MainClockCell {
+            cell.data = presenter?.cellForRowClock()
             return cell
         }
         return UITableViewCell()

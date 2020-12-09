@@ -7,6 +7,13 @@
 
 import UIKit
 
+struct MainClock {
+    let prayerName: String
+    let current: String
+    let remaining: String
+    let date: String
+}
+
 class MainClockCell: UITableViewCell {
     
     @IBOutlet weak var container_view: UIStackView!
@@ -18,6 +25,12 @@ class MainClockCell: UITableViewCell {
     struct source {
         static var nib: UINib = UINib(nibName: String(describing: MainClockCell.self), bundle: Bundle(for: MainClockCell.self))
         static var identifier: String = String(describing: MainClockCell.self)
+    }
+    
+    var data: MainClock? {
+        didSet {
+            updateUI()
+        }
     }
     
     override func awakeFromNib() {
@@ -69,8 +82,12 @@ class MainClockCell: UITableViewCell {
     }
     
     private func updateUI() {
-        lbl_time.text = "20:00"
-        lbl_remaining_time.text = "Fajr (-07:00:00)"
-        lbl_date.text = "Wednesday, 17 August 2020"
+        lbl_time.text = data?.current
+        lbl_remaining_time.text = "\(data?.prayerName ?? "") (\(data?.remaining ?? ""))"
+        lbl_date.text = data?.date
+    }
+    
+    func updateIntervalView(newInterval: String) {
+        lbl_remaining_time.text = "\(data?.prayerName ?? "") (\(newInterval))"
     }
 }

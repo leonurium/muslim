@@ -14,6 +14,7 @@ protocol MainPresenterToView: class {
     
     func setupViews()
     func reloadTableView()
+    func updateIntevalView(remaining: String)
 }
 
 // MARK: Interactor -
@@ -37,7 +38,7 @@ protocol MainViewToPresenter: class {
     
     func didLoad()
     func numberOfRowsInSection() -> Int
-    func cellForRowClockCell()
+    func cellForRowClock() -> MainClock?
 }
 
 protocol MainInteractorToPresenter: class {

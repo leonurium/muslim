@@ -70,7 +70,7 @@ struct MuslimPrayerTimes {
     }
 }
 
-enum MuslimPrayer {
+enum MuslimPrayer: CaseIterable {
     case fajr
     case sunrise
     case dhuhr
