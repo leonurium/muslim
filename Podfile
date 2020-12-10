@@ -8,7 +8,6 @@ target 'muslim' do
   # Pods for muslim
   pod 'Adhan'
   pod 'Siren'
-  pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'SPPermissions'
