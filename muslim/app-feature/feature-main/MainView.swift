@@ -58,6 +58,12 @@ class MainView: UIViewController, MainPresenterToView {
             cell.updateIntervalView(newInterval: remaining)
         }
     }
+    
+    func updateQiblaView(angle: Double) {
+        if let cell = tableview.cellForRow(at: IndexPath(row: 2, section: 0)) as? MainQiblaCell {
+            cell.updateQibla(angle: angle)
+        }
+    }
 }
 
 extension MainView: UITableViewDelegate, UITableViewDataSource {

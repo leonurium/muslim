@@ -9,9 +9,14 @@ import Foundation
 import CoreLocation
 import Adhan
 
-class MainInteractor: MainPresenterToInteractor {
+class MainInteractor: NSObject, MainPresenterToInteractor {
     weak var presenter: MainInteractorToPresenter?
-    private var locationManager: CLLocationManager = CLLocationManager()
+    private var locationManager: CLLocationManager = {
+        $0.requestWhenInUseAuthorization()
+        $0.startUpdatingHeading()
+        $0.startUpdatingLocation()
+        return $0
+    }(CLLocationManager())
     
     func getPrayerTimes() {
         let cal = Calendar(identifier: Calendar.Identifier.iso8601)
@@ -38,5 +43,27 @@ class MainInteractor: MainPresenterToInteractor {
             presenter?.failGetPrayerTimes(title: LTitleAlert.error.localized, message: LError.not_found_current_location.localized)
         }
     }
+    
+    func getQiblaDirection() {
+        locationManager.delegate = self
+    }
+}
+
+extension MainInteractor: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        if let currentLoc = locationManager.location?.coordinate {
+            let angleDirection = Qibla(coordinates: Coordinates(latitude: currentLoc.latitude, longitude: currentLoc.longitude)).direction
+            let angel = (Double.pi/180) * -(Double(newHeading.trueHeading) - angleDirection)
+            debugLog(angel)
+            presenter?.didGetQiblaDirection(angle: angel)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        presenter?.failGetLocation(title: LTitleAlert.error.localized, message: error.localizedDescription)
+    }
 }

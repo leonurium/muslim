@@ -21,10 +21,11 @@ class MainPresenter: MainViewToPresenter {
     func didLoad() {
         view?.setupViews()
         interactor?.getPrayerTimes()
+        interactor?.getQiblaDirection()
     }
     
     func numberOfRowsInSection() -> Int {
-        return 2
+        return 3
     }
     
     func cellForRowClock() -> MainClock? {
@@ -148,4 +149,11 @@ extension MainPresenter: MainInteractorToPresenter {
     func failGetPrayerTimes(title: String, message: String) {
         debugLog(message)
     }
+    
+    func failGetLocation(title: String, message: String) {
+        
+    }
+    
+    func didGetQiblaDirection(angle: Double) {
+        view?.updateQiblaView(angle: angle)    }
 }

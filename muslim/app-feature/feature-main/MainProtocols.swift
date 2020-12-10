@@ -15,6 +15,7 @@ protocol MainPresenterToView: class {
     func setupViews()
     func reloadTableView()
     func updateIntevalView(remaining: String)
+    func updateQiblaView(angle: Double)
 }
 
 // MARK: Interactor -
@@ -22,6 +23,7 @@ protocol MainPresenterToInteractor: class {
     var presenter: MainInteractorToPresenter?  { get set }
     
     func getPrayerTimes()
+    func getQiblaDirection()
 }
 
 
@@ -46,4 +48,6 @@ protocol MainViewToPresenter: class {
 protocol MainInteractorToPresenter: class {
     func didGetPrayerTimes(times: MuslimPrayerTimes)
     func failGetPrayerTimes(title: String, message: String)
+    func failGetLocation(title: String, message: String)
+    func didGetQiblaDirection(angle: Double)
 }

@@ -49,4 +49,10 @@ class MainQiblaCell: UITableViewCell {
         image_compass.image = UIImage(named: qibla?.image_compass ?? "")
         image_qibla_direction.image = UIImage(named: qibla?.image_qibla_direction ?? "")
     }
+    
+    func updateQibla(angle: Double) {
+        UIView.animate(withDuration: 0.5) {
+            self.image_qibla_direction.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+        }
+    }
 }
