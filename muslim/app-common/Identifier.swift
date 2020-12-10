@@ -19,5 +19,7 @@ enum Identifier {
         // MARK: - Assets Image
         case image_background_1
         case image_background_2
+        case image_compass_1
+        case image_qibla_direction_1
     }
 }

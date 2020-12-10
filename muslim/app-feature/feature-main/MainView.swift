@@ -42,6 +42,7 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.separatorStyle = .none
         tableview.register(MainClockCell.source.nib, forCellReuseIdentifier: MainClockCell.source.identifier)
         tableview.register(MainTimeTableCell.source.nib, forCellReuseIdentifier: MainTimeTableCell.source.identifier)
+        tableview.register(MainQiblaCell.source.nib, forCellReuseIdentifier: MainQiblaCell.source.identifier)
         
         let imageView = UIImageView()
         imageView.image = UIImage(identifierName: .image_background_2)
@@ -77,6 +78,13 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: MainTimeTableCell.source.identifier) as? MainTimeTableCell {
             cell.timeTable = presenter?.cellForRowTimeTable()
             cell.delegate = self
+            return cell
+        }
+        
+        if
+            indexPath.row == 2,
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainQiblaCell.source.identifier) as? MainQiblaCell {
+            cell.qibla = presenter?.cellForRowQibla()
             return cell
         }
         

@@ -107,6 +107,13 @@ class MainPresenter: MainViewToPresenter {
         return nil
     }
     
+    func cellForRowQibla() -> MainQibla? {
+        return MainQibla(
+            image_compass: Identifier.ImageName.image_compass_1.rawValue,
+            image_qibla_direction: Identifier.ImageName.image_qibla_direction_1.rawValue
+        )
+    }
+    
     @objc func didChangeTimeInterval() {
         debugLog(remaining)
         if isPlus {
