@@ -51,6 +51,11 @@ class MainQiblaCell: UITableViewCell {
     }
     
     func updateQibla(angle: Double) {
+        let decimal = Double(round(100*angle)/100)
+        if decimal <= 0.01 && decimal >= -0.01 {
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+        }
+        
         UIView.animate(withDuration: 0.5) {
             self.image_qibla_direction.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
         }

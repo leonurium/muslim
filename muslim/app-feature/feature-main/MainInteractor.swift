@@ -58,7 +58,6 @@ extension MainInteractor: CLLocationManagerDelegate {
         if let currentLoc = locationManager.location?.coordinate {
             let angleDirection = Qibla(coordinates: Coordinates(latitude: currentLoc.latitude, longitude: currentLoc.longitude)).direction
             let angel = (Double.pi/180) * -(Double(newHeading.trueHeading) - angleDirection)
-            debugLog(angel)
             presenter?.didGetQiblaDirection(angle: angel)
         }
     }
