@@ -11,6 +11,7 @@
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
 		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
+		AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C17258271FA00B205E5 /* LocalNotificationX.swift */; };
 		AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686C9C258075CB00040110 /* Int+Ext.swift */; };
 		AA686CA1258078F400040110 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA0258078F400040110 /* Constant.swift */; };
 		AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA686CA62580980200040110 /* MainTimeTableCell.xib */; };
@@ -50,6 +51,7 @@
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
+		AA227C17258271FA00B205E5 /* LocalNotificationX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationX.swift; path = "muslim/app-settings/LocalNotificationX.swift"; sourceTree = SOURCE_ROOT; };
 		AA686C9C258075CB00040110 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		AA686CA0258078F400040110 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AA686CA62580980200040110 /* MainTimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTimeTableCell.xib; sourceTree = "<group>"; };
@@ -117,6 +119,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA227C15258271CD00B205E5 /* app-helper */ = {
+			isa = PBXGroup;
+			children = (
+				AA227C16258271DF00B205E5 /* LocalNotificationX */,
+			);
+			path = "app-helper";
+			sourceTree = "<group>";
+		};
+		AA227C16258271DF00B205E5 /* LocalNotificationX */ = {
+			isa = PBXGroup;
+			children = (
+				AA227C17258271FA00B205E5 /* LocalNotificationX.swift */,
+			);
+			path = LocalNotificationX;
+			sourceTree = "<group>";
+		};
 		AA686C9F258078DB00040110 /* app-settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +164,7 @@
 		AA984BC0257E1B560008E31D /* muslim */ = {
 			isa = PBXGroup;
 			children = (
+				AA227C15258271CD00B205E5 /* app-helper */,
 				AA686C9F258078DB00040110 /* app-settings */,
 				AA984C57257E66DD0008E31D /* app-muslimkit */,
 				AA984C4B257E630D0008E31D /* app-extension */,
@@ -429,6 +448,7 @@
 				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
 				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
+				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,

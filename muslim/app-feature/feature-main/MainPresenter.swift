@@ -86,12 +86,21 @@ class MainPresenter: MainViewToPresenter {
             let currentPrayer = prayerTimes.currentPrayer(),
             let nextPrayer = prayerTimes.nextPrayer() {
             
+            //delete all notif
+            LocalNotificationX.shared.cancelAllNotifications()
+            
             var finalPrayers: [MainTimeTablePrayerAndTimes] = []
             let prayers = MuslimPrayer.allCases
             for prayer in prayers {
                 let time = prayerTimes.time(for: prayer)
                 let tmpPrayer = MainTimeTablePrayerAndTimes(prayer: prayer, time: time)
                 finalPrayers.append(tmpPrayer)
+                
+                // add notif
+                let formatter = DateFormatter()
+                formatter.timeStyle = .short
+                let timeString = formatter.string(from: time)
+                LocalNotificationX.shared.addNotification(title: String(describing: prayer), body: "Time to pray \(timeString)", trigger: .timeInterval(time.timeIntervalSinceNow))
             }
             
             var shouldCurrentPrayer: MuslimPrayer = .fajr
@@ -116,7 +125,6 @@ class MainPresenter: MainViewToPresenter {
     }
     
     @objc func didChangeTimeInterval() {
-        debugLog(remaining)
         if isPlus {
             remaining += 1
             let (hour, minute, second) = remaining.secondsToHoursMinutesSeconds()
@@ -151,7 +159,7 @@ extension MainPresenter: MainInteractorToPresenter {
     }
     
     func failGetLocation(title: String, message: String) {
-        
+        debugLog(message)
     }
     
     func didGetQiblaDirection(angle: Double) {
