@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		71A50267299B7BF02B2636EE /* Pods_muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E428D03E8A27E49315D8B /* Pods_muslim.framework */; };
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
+		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
+		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
 		AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686C9C258075CB00040110 /* Int+Ext.swift */; };
 		AA686CA1258078F400040110 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA0258078F400040110 /* Constant.swift */; };
 		AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA686CA62580980200040110 /* MainTimeTableCell.xib */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		971E428D03E8A27E49315D8B /* Pods_muslim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_muslim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
+		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
 		AA686C9C258075CB00040110 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		AA686CA0258078F400040110 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AA686CA62580980200040110 /* MainTimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTimeTableCell.xib; sourceTree = "<group>"; };
@@ -218,6 +222,8 @@
 				AA984C54257E64F50008E31D /* MainClockCell.swift */,
 				AA686CA62580980200040110 /* MainTimeTableCell.xib */,
 				AA686CA92580980F00040110 /* MainTimeTableCell.swift */,
+				AA227C082581CFED00B205E5 /* MainQiblaCell.xib */,
+				AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */,
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
 				AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */,
 				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
@@ -413,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */,
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
 				AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */,

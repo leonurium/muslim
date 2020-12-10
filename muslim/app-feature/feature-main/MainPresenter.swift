@@ -82,7 +82,8 @@ class MainPresenter: MainViewToPresenter {
     func cellForRowTimeTable() -> MainTimeTable? {
         if
             let prayerTimes = times,
-            let currentPrayer = prayerTimes.currentPrayer() {
+            let currentPrayer = prayerTimes.currentPrayer(),
+            let nextPrayer = prayerTimes.nextPrayer() {
             
             var finalPrayers: [MainTimeTablePrayerAndTimes] = []
             let prayers = MuslimPrayer.allCases
@@ -92,7 +93,15 @@ class MainPresenter: MainViewToPresenter {
                 finalPrayers.append(tmpPrayer)
             }
             
-            let timeTable = MainTimeTable(prayers: finalPrayers, currentPrayer: currentPrayer)
+            var shouldCurrentPrayer: MuslimPrayer = .fajr
+            let now = Date()
+            if (now.timeIntervalSince(prayerTimes.time(for: currentPrayer)) / 60) >= TimeIntervalConstant.limit_value_between_prayer.rawValue {
+                shouldCurrentPrayer = nextPrayer
+            } else {
+                shouldCurrentPrayer = currentPrayer
+            }
+            
+            let timeTable = MainTimeTable(prayers: finalPrayers, currentPrayer: shouldCurrentPrayer)
             return timeTable
         }
         return nil

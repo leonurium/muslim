@@ -42,7 +42,6 @@ class MainTimeTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
-        updateUI()
     }
     
     private func setupViews() {
@@ -88,21 +87,28 @@ class MainTimeTableCell: UITableViewCell {
             formatter.timeStyle = .short
             lbl_time.text = formatter.string(from: prayer.time)
             
-            if prayer.prayer == main.currentPrayer {
-                lbl_prayer.textColor = UIMColor.buttercup.get()
-                lbl_prayer.makeBold()
-                
-                lbl_time.textColor = UIMColor.buttercup.get()
-                lbl_time.makeBold()
-            }
-            
             let stack = UIStackView()
             stack.spacing = 8
-            stack.distribution = .fillEqually
+            stack.distribution = .fillProportionally
             stack.axis = .horizontal
             stack.backgroundColor = .clear
+            
+            if prayer.prayer == main.currentPrayer {
+                lbl_prayer.makeBold()
+                lbl_time.makeBold()
+                stack.backgroundColor = UIMColor.white.get().withAlphaComponent(0.4)
+                stack.layer.cornerRadius = 10
+            }
+            
+            let view = UIView()
+            view.backgroundColor = .clear
+            let view2 = UIView()
+            view2.backgroundColor = .clear
+            
+            stack.addArrangedSubview(view)
             stack.addArrangedSubview(lbl_prayer)
             stack.addArrangedSubview(lbl_time)
+            stack.addArrangedSubview(view2)
             
             container_view.addArrangedSubview(stack)
         }
