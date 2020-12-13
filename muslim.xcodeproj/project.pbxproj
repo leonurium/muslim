@@ -28,7 +28,6 @@
 		AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C12257E35A90008E31D /* MainInteractor.swift */; };
 		AA984C19257E35A90008E31D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C13257E35A90008E31D /* MainView.swift */; };
 		AA984C1A257E35A90008E31D /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA984C14257E35A90008E31D /* MainView.xib */; };
-		AA984C1D257E35C80008E31D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C1C257E35C80008E31D /* Engine.swift */; };
 		AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C22257E38B50008E31D /* SceneDelegate.swift */; };
 		AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA984C2A257E4CDE0008E31D /* LaunchScreen.storyboard */; };
 		AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */; };
@@ -74,7 +73,6 @@
 		AA984C12257E35A90008E31D /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		AA984C13257E35A90008E31D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AA984C14257E35A90008E31D /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		AA984C1C257E35C80008E31D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		AA984C22257E38B50008E31D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AA984C2A257E4CDE0008E31D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				AA984BCA257E1B560008E31D /* Assets.xcassets */,
 				AA984C22257E38B50008E31D /* SceneDelegate.swift */,
 				AA984BC1257E1B560008E31D /* AppDelegate.swift */,
-				AA984C1C257E35C80008E31D /* Engine.swift */,
 				AA984C2A257E4CDE0008E31D /* LaunchScreen.storyboard */,
 			);
 			path = "app-support";
@@ -479,7 +476,6 @@
 				AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */,
 				AA03437A2585B460007DE320 /* CompositeAppDelegate.swift in Sources */,
 				AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */,
-				AA984C1D257E35C80008E31D /* Engine.swift in Sources */,
 				AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
