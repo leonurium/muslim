@@ -37,11 +37,14 @@ extension AppLifecycleListener {
     }
 }
 
-class AppLifecycleMediator {
+class AppLifecycleMediator: NSObject {
     private var listeners: [AppLifecycleListener] = []
     
     init(listeners: [AppLifecycleListener]) {
+        super.init()
         self.listeners.append(contentsOf: listeners)
+        debugLog(listeners)
+        subscribe()
     }
     
     deinit {

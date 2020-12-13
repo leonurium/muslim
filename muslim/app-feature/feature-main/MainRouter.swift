@@ -9,8 +9,10 @@ import UIKit
 
 class MainRouter: MainPresenterToRouter {
     
+    private static var mediator: AppLifecycleMediator?
+    
     static func createMainModule() -> UIViewController {
-        let view: UIViewController & MainPresenterToView = MainView()
+        let view: UIViewController & MainPresenterToView & AppLifecycleListener = MainView()
         let presenter: MainViewToPresenter & MainInteractorToPresenter = MainPresenter()
         let interactor: MainPresenterToInteractor = MainInteractor()
         let router: MainPresenterToRouter = MainRouter()
@@ -21,6 +23,8 @@ class MainRouter: MainPresenterToRouter {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
+        let mediator = AppLifecycleMediator(listeners: [view])
+        MainRouter.mediator = mediator
         return view
     }
 }

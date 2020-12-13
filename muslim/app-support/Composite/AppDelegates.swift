@@ -21,6 +21,7 @@ enum AppDelegateFactory {
 
 class StartupAppDelegate: AppDelegateType {
     var window: UIWindow?
+    var mediator: AppLifecycleMediator?
     
     init(window: UIWindow? = nil) {
         self.window = window
@@ -28,13 +29,16 @@ class StartupAppDelegate: AppDelegateType {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let navigationController = UINavigationController(rootViewController: getInitial())
+        let controller = getInitial()
+        let navigationController = UINavigationController(rootViewController: controller)
         navigationController.navigationBar.isHidden = true
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
-        
+        if let vc = controller as? MainView {
+            mediator = AppLifecycleMediator(listeners: [vc])
+        }
         return true
     }
     
