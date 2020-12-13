@@ -20,4 +20,24 @@ class CompositeAppDelegate: AppDelegateType {
         appDelegates.forEach({ _ = $0.application?(application, didFinishLaunchingWithOptions: launchOptions) })
         return true
     }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        appDelegates.forEach({ $0.applicationWillResignActive?(application) })
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        appDelegates.forEach({ $0.applicationDidEnterBackground?(application) })
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        appDelegates.forEach({ $0.applicationWillEnterForeground?(application) })
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        appDelegates.forEach({ $0.applicationDidBecomeActive?(application) })
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        appDelegates.forEach({ $0.applicationWillTerminate?(application) })
+    }
 }
