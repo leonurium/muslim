@@ -12,6 +12,9 @@
 		AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03437D2585B659007DE320 /* AppDelegates.swift */; };
 		AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */; };
 		AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343832585BA24007DE320 /* SceneDelegates.swift */; };
+		AA03438825861A16007DE320 /* NSNotification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */; };
+		AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */; };
+		AA03438F2586200D007DE320 /* AppListeners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438E2586200D007DE320 /* AppListeners.swift */; };
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
 		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
@@ -55,6 +58,9 @@
 		AA03437D2585B659007DE320 /* AppDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegates.swift; sourceTree = "<group>"; };
 		AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegate.swift; sourceTree = "<group>"; };
 		AA0343832585BA24007DE320 /* SceneDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegates.swift; sourceTree = "<group>"; };
+		AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification.Name+Ext.swift"; sourceTree = "<group>"; };
+		AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleMediator.swift; sourceTree = "<group>"; };
+		AA03438E2586200D007DE320 /* AppListeners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListeners.swift; sourceTree = "<group>"; };
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
@@ -136,6 +142,15 @@
 			path = Composite;
 			sourceTree = "<group>";
 		};
+		AA03438A25861FBF007DE320 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */,
+				AA03438E2586200D007DE320 /* AppListeners.swift */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
 		AA227C15258271CD00B205E5 /* app-helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +211,7 @@
 		AA984C0A257E34F30008E31D /* app-support */ = {
 			isa = PBXGroup;
 			children = (
+				AA03438A25861FBF007DE320 /* Mediator */,
 				AA0343782585B449007DE320 /* Composite */,
 				AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */,
 				AA984BCA257E1B560008E31D /* Assets.xcassets */,
@@ -247,6 +263,7 @@
 				AA984C6A257E6A610008E31D /* String+Ext.swift */,
 				AA984C70257E700E0008E31D /* UIColor+Ext.swift */,
 				AA686C9C258075CB00040110 /* Int+Ext.swift */,
+				AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */,
 			);
 			path = "app-extension";
 			sourceTree = "<group>";
@@ -467,6 +484,7 @@
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
+				AA03438825861A16007DE320 /* NSNotification.Name+Ext.swift in Sources */,
 				AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,
@@ -486,7 +504,9 @@
 				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
 				AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */,
 				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,
+				AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */,
 				AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */,
+				AA03438F2586200D007DE320 /* AppListeners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

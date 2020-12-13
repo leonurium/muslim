@@ -12,6 +12,7 @@ class MainPresenter: MainViewToPresenter {
     var interactor: MainPresenterToInteractor?
     var router: MainPresenterToRouter?
     
+    private let mediator: AppLifecycleMediator = AppLifecycleMediator(listeners: [MainPresenter()])
     private var times: MuslimPrayerTimes?
     private var timer: Timer?
     private var remaining: Int = 0
@@ -172,4 +173,10 @@ extension MainPresenter: MainInteractorToPresenter {
     
     func didGetQiblaDirection(angle: Double) {
         view?.updateQiblaView(angle: angle)    }
+}
+
+extension MainPresenter: AppLifecycleListener {
+    func willResignActive() {
+        view?.reloadTableView()
+    }
 }

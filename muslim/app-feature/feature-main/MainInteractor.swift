@@ -12,7 +12,7 @@ import Adhan
 class MainInteractor: NSObject, MainPresenterToInteractor {
     weak var presenter: MainInteractorToPresenter?
     private var locationManager: CLLocationManager = {
-        $0.requestWhenInUseAuthorization()
+//        $0.requestWhenInUseAuthorization()
         $0.startUpdatingHeading()
         $0.startUpdatingLocation()
         return $0

@@ -13,6 +13,7 @@ struct LocalNotificationModelX: Equatable {
     let id: String
     let title: String
     let body: String
+    let sound: UNNotificationSound
     let repeats: Bool
     let trigger: TriggerType
     
@@ -76,7 +77,7 @@ class LocalNotificationX {
             let content     = UNMutableNotificationContent()
             content.title   = notification.title
             content.body    = notification.body
-            content.sound   = .default
+            content.sound   = notification.sound
             
             var trigger: UNNotificationTrigger?
             switch notification.trigger {
@@ -98,7 +99,14 @@ class LocalNotificationX {
     }
     
     func addNotification(id: String = UUID().uuidString, title: String, body: String?, trigger: LocalNotificationModelX.TriggerType, repeats: Bool = false) {
-        let notifModel = LocalNotificationModelX(id: id, title: title, body: body ?? "", repeats: repeats, trigger: trigger)
+        let notifModel = LocalNotificationModelX(id: id, title: title, body: body ?? "", sound: .default, repeats: repeats, trigger: trigger)
+        if !notifications.contains(notifModel) {
+            self.notifications.append(notifModel)
+        }
+    }
+    
+    func addNotification(id: String = UUID().uuidString, title: String, body: String?, sound: UNNotificationSound?, trigger: LocalNotificationModelX.TriggerType, repeats: Bool = false) {
+        let notifModel = LocalNotificationModelX(id: id, title: title, body: body ?? "", sound: sound ?? .default, repeats: repeats, trigger: trigger)
         if !notifications.contains(notifModel) {
             self.notifications.append(notifModel)
         }
