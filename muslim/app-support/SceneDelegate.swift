@@ -7,9 +7,11 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var sceneDelegate: SceneDelegateType? = nil
 
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,16 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        let engine = Engine()
-        let controller = engine.getInitial()
-        let navigationController = UINavigationController(rootViewController: controller)
-        navigationController.navigationBar.isHidden = true
-        
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
-        self.window = window
+        sceneDelegate = SceneDelegateFactory.makeDefault(window: window)
+        sceneDelegate?.scene?(scene, willConnectTo: session, options: connectionOptions)
     }
 
     @available(iOS 13.0, *)

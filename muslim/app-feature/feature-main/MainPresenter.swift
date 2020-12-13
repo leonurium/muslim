@@ -97,10 +97,18 @@ class MainPresenter: MainViewToPresenter {
                 finalPrayers.append(tmpPrayer)
                 
                 // add notif
-                let formatter = DateFormatter()
-                formatter.timeStyle = .short
-                let timeString = formatter.string(from: time)
-                LocalNotificationX.shared.addNotification(title: String(describing: prayer), body: "Time to pray \(timeString)", trigger: .timeInterval(time.timeIntervalSinceNow))
+                let timeIntervalNNotif = time.timeIntervalSinceNow
+                if timeIntervalNNotif > 0 {
+                    let formatter = DateFormatter()
+                    formatter.timeStyle = .short
+                    let timeString = formatter.string(from: time)
+                    LocalNotificationX.shared.addNotification(
+                        title: String(describing: prayer).capitalized,
+                        body: "Time to pray \(timeString)",
+                        trigger: .timeInterval(timeIntervalNNotif)
+                    )
+                    LocalNotificationX.shared.save()
+                }
             }
             
             var shouldCurrentPrayer: MuslimPrayer = .fajr

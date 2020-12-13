@@ -102,7 +102,6 @@ class LocalNotificationX {
         if !notifications.contains(notifModel) {
             self.notifications.append(notifModel)
         }
-        debugLog("total", notifications)
     }
     
     func save() {

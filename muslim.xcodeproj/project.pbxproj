@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		71A50267299B7BF02B2636EE /* Pods_muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E428D03E8A27E49315D8B /* Pods_muslim.framework */; };
+		AA03437A2585B460007DE320 /* CompositeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343792585B460007DE320 /* CompositeAppDelegate.swift */; };
+		AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03437D2585B659007DE320 /* AppDelegates.swift */; };
+		AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */; };
+		AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343832585BA24007DE320 /* SceneDelegates.swift */; };
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
 		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
@@ -48,6 +52,10 @@
 
 /* Begin PBXFileReference section */
 		971E428D03E8A27E49315D8B /* Pods_muslim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_muslim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0343792585B460007DE320 /* CompositeAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeAppDelegate.swift; sourceTree = "<group>"; };
+		AA03437D2585B659007DE320 /* AppDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegates.swift; sourceTree = "<group>"; };
+		AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegate.swift; sourceTree = "<group>"; };
+		AA0343832585BA24007DE320 /* SceneDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegates.swift; sourceTree = "<group>"; };
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
@@ -119,6 +127,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA0343782585B449007DE320 /* Composite */ = {
+			isa = PBXGroup;
+			children = (
+				AA0343792585B460007DE320 /* CompositeAppDelegate.swift */,
+				AA03437D2585B659007DE320 /* AppDelegates.swift */,
+				AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */,
+				AA0343832585BA24007DE320 /* SceneDelegates.swift */,
+			);
+			path = Composite;
+			sourceTree = "<group>";
+		};
 		AA227C15258271CD00B205E5 /* app-helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +198,7 @@
 		AA984C0A257E34F30008E31D /* app-support */ = {
 			isa = PBXGroup;
 			children = (
+				AA0343782585B449007DE320 /* Composite */,
 				AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */,
 				AA984BCA257E1B560008E31D /* Assets.xcassets */,
 				AA984C22257E38B50008E31D /* SceneDelegate.swift */,
@@ -450,17 +470,21 @@
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
+				AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,
 				AA984C17257E35A90008E31D /* MainProtocols.swift in Sources */,
 				AA984C55257E64F50008E31D /* MainClockCell.swift in Sources */,
 				AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */,
 				AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */,
+				AA03437A2585B460007DE320 /* CompositeAppDelegate.swift in Sources */,
 				AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */,
 				AA984C1D257E35C80008E31D /* Engine.swift in Sources */,
+				AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
+				AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */,
 				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
 				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
