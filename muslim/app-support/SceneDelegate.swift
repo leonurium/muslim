@@ -22,20 +22,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         sceneDelegate = SceneDelegateFactory.makeDefault(window: window)
         sceneDelegate?.scene?(scene, willConnectTo: session, options: connectionOptions)
     }
-
-    @available(iOS 13.0, *)
-    func sceneWillResignActive(_ scene: UIScene) {
-        sceneDelegate?.sceneWillResignActive?(scene)
-    }
-
-    @available(iOS 13.0, *)
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        sceneDelegate?.sceneWillEnterForeground?(scene)
-    }
-
-    @available(iOS 13.0, *)
-    func sceneDidEnterBackground(_ scene: UIScene) {
-        sceneDelegate?.sceneDidEnterBackground?(scene)
-    }
 }
 

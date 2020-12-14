@@ -47,6 +47,8 @@ class MainView: UIViewController, MainPresenterToView {
         let imageView = UIImageView()
         imageView.image = UIImage(identifierName: .image_background_2)
         tableview.backgroundView = imageView
+        
+        navigationController?.navigationBar.isHidden = false
     }
     
     func reloadTableView() {
@@ -119,17 +121,8 @@ extension MainView: SPPermissionDialogDataSource {
 }
 
 extension MainView: AppLifecycleListener {
-    func willResignActive() {
-        debugLog(#function)
-    }
-    
     func willEnterForeground() {
         self.reloadTableView()
-        debugLog(#function)
-    }
-    
-    func didEnterBackground() {
-        debugLog(#function)
     }
 }
 

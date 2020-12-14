@@ -38,18 +38,6 @@ class StartupAppDelegate: AppDelegateType {
         return true
     }
     
-    func applicationWillResignActive(_ application: UIApplication) {
-        AppLifecycleMediator.push(name: .willResignActive)
-    }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        AppLifecycleMediator.push(name: .didEnterBackground)
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        AppLifecycleMediator.push(name: .willEnterForeground)
-    }
-    
     private func getInitial() -> UIViewController {
         return MainRouter.createMainModule()
     }

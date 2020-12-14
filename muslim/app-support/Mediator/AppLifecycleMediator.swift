@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AppLifecycleListener {
     func willResignActive()
@@ -40,14 +41,16 @@ class AppLifecycleMediator: NSObject {
         NotificationCenter.default.removeObserver(self)
     }
     
-    private func subscribe() {
-        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: .willResignActive, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: .didEnterBackground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: .willEnterForeground, object: nil)
-    }
-    
-    static func push(name: NSNotification.Name) {
-        NotificationCenter.default.post(name: name, object: nil, userInfo: nil)
+    private func subscribe() {        
+        if #available(iOS 13.0, *) {
+            NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIScene.willDeactivateNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIScene.didEnterBackgroundNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIScene.willEnterForegroundNotification, object: nil)
+        } else {
+            NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.willResignActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        }
     }
     
     @objc private func willResignActive() {
