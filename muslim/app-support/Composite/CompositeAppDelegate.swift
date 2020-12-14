@@ -32,12 +32,4 @@ class CompositeAppDelegate: AppDelegateType {
     func applicationWillEnterForeground(_ application: UIApplication) {
         appDelegates.forEach({ $0.applicationWillEnterForeground?(application) })
     }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        appDelegates.forEach({ $0.applicationDidBecomeActive?(application) })
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        appDelegates.forEach({ $0.applicationWillTerminate?(application) })
-    }
 }

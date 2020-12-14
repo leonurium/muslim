@@ -50,7 +50,9 @@ class MainView: UIViewController, MainPresenterToView {
     }
     
     func reloadTableView() {
-        tableview.reloadData()
+        if let table = tableview {
+            table.reloadData()
+        }
     }
     
     func updateIntevalView(remaining: String) {
@@ -113,6 +115,21 @@ extension MainView: SPPermissionDialogDataSource {
         case .locationAlwaysAndWhenInUse : return infoPlist(key: .NSLocationAlwaysAndWhenInUseUsageDescription)
         default: return "Need Allow for use this Application"
         }
+    }
+}
+
+extension MainView: AppLifecycleListener {
+    func willResignActive() {
+        debugLog(#function)
+    }
+    
+    func willEnterForeground() {
+        self.reloadTableView()
+        debugLog(#function)
+    }
+    
+    func didEnterBackground() {
+        debugLog(#function)
     }
 }
 

@@ -36,6 +36,18 @@ class StartupSceneDelegate: SceneDelegateType {
         self.window = window
     }
     
+    func sceneWillResignActive(_ scene: UIScene) {
+        AppLifecycleMediator.push(name: .willResignActive)
+    }
+    
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        AppLifecycleMediator.push(name: .didEnterBackground)
+    }
+    
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        AppLifecycleMediator.push(name: .willEnterForeground)
+    }
+    
     private func getInitial() -> UIViewController {
         return MainRouter.createMainModule()
     }

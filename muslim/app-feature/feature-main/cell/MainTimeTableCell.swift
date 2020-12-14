@@ -66,6 +66,10 @@ class MainTimeTableCell: UITableViewCell {
     private func updateUI() {
         guard let main = timeTable else { return }
         
+        if container_view.arrangedSubviews.count >= main.prayers.count {
+            return
+        }
+        
         for prayer in main.prayers {
             guard let index = main.prayers.firstIndex(where: { String(describing: $0.prayer) == String(describing: prayer.prayer) }) else { return }
             

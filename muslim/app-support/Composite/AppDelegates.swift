@@ -21,7 +21,6 @@ enum AppDelegateFactory {
 
 class StartupAppDelegate: AppDelegateType {
     var window: UIWindow?
-    var mediator: AppLifecycleMediator?
     
     init(window: UIWindow? = nil) {
         self.window = window
@@ -36,9 +35,6 @@ class StartupAppDelegate: AppDelegateType {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
-        if let vc = controller as? MainView {
-            mediator = AppLifecycleMediator(listeners: [vc])
-        }
         return true
     }
     
@@ -52,14 +48,6 @@ class StartupAppDelegate: AppDelegateType {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         AppLifecycleMediator.push(name: .willEnterForeground)
-    }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        AppLifecycleMediator.push(name: .didBecomeActive)
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        AppLifecycleMediator.push(name: .willTerminate)
     }
     
     private func getInitial() -> UIViewController {

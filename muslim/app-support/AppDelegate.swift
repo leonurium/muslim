@@ -33,14 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(_ application: UIApplication) {
         appDelegate?.applicationWillEnterForeground?(application)
     }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        appDelegate?.applicationDidBecomeActive?(application)
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        appDelegate?.applicationWillTerminate?(application)
-    }
 
     // MARK: UISceneSession Lifecycle
 

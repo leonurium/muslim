@@ -173,17 +173,3 @@ extension MainPresenter: MainInteractorToPresenter {
     func didGetQiblaDirection(angle: Double) {
         view?.updateQiblaView(angle: angle)    }
 }
-
-extension MainView: AppLifecycleListener {
-    func willResignActive() {
-        self.reloadTableView()
-    }
-    
-    func willEnterForeground() {
-        debugLog(#function)
-    }
-    
-    func didEnterBackground() {
-        debugLog(#function)
-    }
-}

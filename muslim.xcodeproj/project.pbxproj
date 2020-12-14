@@ -14,7 +14,6 @@
 		AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343832585BA24007DE320 /* SceneDelegates.swift */; };
 		AA03438825861A16007DE320 /* NSNotification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */; };
 		AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */; };
-		AA03438F2586200D007DE320 /* AppListeners.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438E2586200D007DE320 /* AppListeners.swift */; };
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
 		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
@@ -60,7 +59,6 @@
 		AA0343832585BA24007DE320 /* SceneDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegates.swift; sourceTree = "<group>"; };
 		AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification.Name+Ext.swift"; sourceTree = "<group>"; };
 		AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleMediator.swift; sourceTree = "<group>"; };
-		AA03438E2586200D007DE320 /* AppListeners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListeners.swift; sourceTree = "<group>"; };
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */,
-				AA03438E2586200D007DE320 /* AppListeners.swift */,
 			);
 			path = Mediator;
 			sourceTree = "<group>";
@@ -506,7 +503,6 @@
 				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,
 				AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */,
 				AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */,
-				AA03438F2586200D007DE320 /* AppListeners.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
