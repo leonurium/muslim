@@ -105,8 +105,12 @@ class LocalNotificationX {
         }
     }
     
-    func addNotification(id: String = UUID().uuidString, title: String, body: String?, sound: UNNotificationSound?, trigger: LocalNotificationModelX.TriggerType, repeats: Bool = false) {
-        let notifModel = LocalNotificationModelX(id: id, title: title, body: body ?? "", sound: sound ?? .default, repeats: repeats, trigger: trigger)
+    func addNotification(id: String = UUID().uuidString, title: String, body: String?, sound: String?, trigger: LocalNotificationModelX.TriggerType, repeats: Bool = false) {
+        var soundNotif: UNNotificationSound = .default
+        if let soundName = sound {
+            soundNotif = UNNotificationSound(named: UNNotificationSoundName(soundName))
+        }
+        let notifModel = LocalNotificationModelX(id: id, title: title, body: body ?? "", sound: soundNotif, repeats: repeats, trigger: trigger)
         if !notifications.contains(notifModel) {
             self.notifications.append(notifModel)
         }

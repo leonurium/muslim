@@ -121,8 +121,17 @@ extension MainView: SPPermissionDialogDataSource {
 }
 
 extension MainView: AppLifecycleListener {
+    func willResignActive() {
+        debugLog(#function)
+    }
+    
+    func didEnterBackground() {
+        debugLog(#function)
+    }
+    
     func willEnterForeground() {
         self.reloadTableView()
+        debugLog(#function)
     }
 }
 

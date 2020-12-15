@@ -12,7 +12,6 @@
 		AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03437D2585B659007DE320 /* AppDelegates.swift */; };
 		AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */; };
 		AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343832585BA24007DE320 /* SceneDelegates.swift */; };
-		AA03438825861A16007DE320 /* NSNotification.Name+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */; };
 		AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */; };
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
@@ -22,6 +21,8 @@
 		AA686CA1258078F400040110 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA0258078F400040110 /* Constant.swift */; };
 		AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA686CA62580980200040110 /* MainTimeTableCell.xib */; };
 		AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA92580980F00040110 /* MainTimeTableCell.swift */; };
+		AA82A35525885B16005932A6 /* adhan_fajr_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA82A35325885B16005932A6 /* adhan_fajr_1.mp3 */; };
+		AA82A35625885B16005932A6 /* adhan_mecca_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA82A35425885B16005932A6 /* adhan_mecca_1.mp3 */; };
 		AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984BC1257E1B560008E31D /* AppDelegate.swift */; };
 		AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA984BCA257E1B560008E31D /* Assets.xcassets */; };
 		AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C0F257E35A90008E31D /* MainPresenter.swift */; };
@@ -57,7 +58,6 @@
 		AA03437D2585B659007DE320 /* AppDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegates.swift; sourceTree = "<group>"; };
 		AA0343802585B79F007DE320 /* CompositeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegate.swift; sourceTree = "<group>"; };
 		AA0343832585BA24007DE320 /* SceneDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegates.swift; sourceTree = "<group>"; };
-		AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification.Name+Ext.swift"; sourceTree = "<group>"; };
 		AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleMediator.swift; sourceTree = "<group>"; };
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
@@ -67,6 +67,8 @@
 		AA686CA0258078F400040110 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AA686CA62580980200040110 /* MainTimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTimeTableCell.xib; sourceTree = "<group>"; };
 		AA686CA92580980F00040110 /* MainTimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimeTableCell.swift; sourceTree = "<group>"; };
+		AA82A35325885B16005932A6 /* adhan_fajr_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adhan_fajr_1.mp3; sourceTree = "<group>"; };
+		AA82A35425885B16005932A6 /* adhan_mecca_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adhan_mecca_1.mp3; sourceTree = "<group>"; };
 		AA984BBE257E1B560008E31D /* muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muslim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA984BC1257E1B560008E31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA984BCA257E1B560008E31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +174,15 @@
 			path = "app-settings";
 			sourceTree = "<group>";
 		};
+		AA82A35225885A07005932A6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				AA82A35325885B16005932A6 /* adhan_fajr_1.mp3 */,
+				AA82A35425885B16005932A6 /* adhan_mecca_1.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		AA984BB5257E1B560008E31D = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +219,7 @@
 		AA984C0A257E34F30008E31D /* app-support */ = {
 			isa = PBXGroup;
 			children = (
+				AA82A35225885A07005932A6 /* Sound */,
 				AA03438A25861FBF007DE320 /* Mediator */,
 				AA0343782585B449007DE320 /* Composite */,
 				AA984C2E257E4FD00008E31D /* GoogleService-Info.plist */,
@@ -260,7 +272,6 @@
 				AA984C6A257E6A610008E31D /* String+Ext.swift */,
 				AA984C70257E700E0008E31D /* UIColor+Ext.swift */,
 				AA686C9C258075CB00040110 /* Int+Ext.swift */,
-				AA03438725861A16007DE320 /* NSNotification.Name+Ext.swift */,
 			);
 			path = "app-extension";
 			sourceTree = "<group>";
@@ -393,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */,
+				AA82A35625885B16005932A6 /* adhan_mecca_1.mp3 in Resources */,
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
 				AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */,
 				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
@@ -400,6 +412,7 @@
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
 				AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */,
+				AA82A35525885B16005932A6 /* adhan_fajr_1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +494,6 @@
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
-				AA03438825861A16007DE320 /* NSNotification.Name+Ext.swift in Sources */,
 				AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,

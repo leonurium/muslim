@@ -102,9 +102,22 @@ class MainPresenter: MainViewToPresenter {
                     let formatter = DateFormatter()
                     formatter.timeStyle = .short
                     let timeString = formatter.string(from: time)
+                    var soundName: String?
+                    
+                    switch prayer {
+                    case .fajr: soundName = Identifier.soundName.adhan_fajr_1.rawValue + ".mp3"
+                    case .sunrise: soundName = nil
+                    case .asr, .dhuhr, .isha, .maghrib: soundName = Identifier.soundName.adhan_mecca_1.rawValue + ".mp3"
+                    }
+//                    LocalNotificationX.shared.addNotification(
+//                        title: String(describing: prayer).capitalized,
+//                        body: "Time to pray \(timeString)",
+//                        trigger: .timeInterval(timeIntervalNNotif)
+//                    )
                     LocalNotificationX.shared.addNotification(
                         title: String(describing: prayer).capitalized,
-                        body: "Time to pray \(timeString)",
+                        body: "Time to pray at \(timeString)",
+                        sound: soundName,
                         trigger: .timeInterval(timeIntervalNNotif)
                     )
                     LocalNotificationX.shared.save()

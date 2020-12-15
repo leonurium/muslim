@@ -8,25 +8,25 @@
 import Foundation
 import UIKit
 
-protocol AppLifecycleListener {
+protocol AppLifecycleListener: class {
     func willResignActive()
     func didEnterBackground()
     func willEnterForeground()
 }
 
-extension AppLifecycleListener {
-    func willResignActive() {
-        self.willResignActive()
-    }
-    
-    func didEnterBackground() {
-        self.didEnterBackground()
-    }
-    
-    func willEnterForeground() {
-        self.willEnterForeground()
-    }
-}
+//extension AppLifecycleListener {
+//    func willResignActive() {
+//        self.willResignActive()
+//    }
+//    
+//    func didEnterBackground() {
+//        self.didEnterBackground()
+//    }
+//    
+//    func willEnterForeground() {
+//        self.willEnterForeground()
+//    }
+//}
 
 class AppLifecycleMediator: NSObject {
     private var listeners: [AppLifecycleListener] = []

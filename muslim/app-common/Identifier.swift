@@ -22,4 +22,10 @@ enum Identifier {
         case image_compass_1
         case image_qibla_direction_1
     }
+    
+    public enum soundName: String {
+        // MARK: - Adhan
+        case adhan_fajr_1
+        case adhan_mecca_1
+    }
 }
