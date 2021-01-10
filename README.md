@@ -1,5 +1,7 @@
 ## muslim
-open-source muslim-app-ios for better life, and also you can feel free to audit source code for illegal things (?), we are respect and honor to keep user's security and their privacy.
+Muslimify is open source, aims to make Muslim life better.
+We really respect the security and privacy of our users, we only use user data for application functionality.
+You can audit the quality of the program code, there may be hidden data collection. You can do a thorough audit.
 
 ### To Do
 - [ ] Banyak
