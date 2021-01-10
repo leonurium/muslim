@@ -50,6 +50,12 @@
 		AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99AB05257FC9500050C92D /* LocalizableDelegate.swift */; };
 		AA99AB09257FC9750050C92D /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA99AB08257FC9750050C92D /* Localizable.swift */; };
 		AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA99AB0F257FCDF00050C92D /* Localizable.strings */; };
+		AA9C7E1725AB0E3B005A04AE /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C7E1125AB0E3B005A04AE /* AboutPresenter.swift */; };
+		AA9C7E1825AB0E3B005A04AE /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C7E1225AB0E3B005A04AE /* AboutRouter.swift */; };
+		AA9C7E1925AB0E3B005A04AE /* AboutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C7E1325AB0E3B005A04AE /* AboutProtocols.swift */; };
+		AA9C7E1A25AB0E3B005A04AE /* AboutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C7E1425AB0E3B005A04AE /* AboutInteractor.swift */; };
+		AA9C7E1B25AB0E3B005A04AE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C7E1525AB0E3B005A04AE /* AboutView.swift */; };
+		AA9C7E1C25AB0E3B005A04AE /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9C7E1625AB0E3B005A04AE /* AboutView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +104,12 @@
 		AA99AB05257FC9500050C92D /* LocalizableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableDelegate.swift; sourceTree = "<group>"; };
 		AA99AB08257FC9750050C92D /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		AA99AB0F257FCDF00050C92D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AA9C7E1125AB0E3B005A04AE /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		AA9C7E1225AB0E3B005A04AE /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		AA9C7E1325AB0E3B005A04AE /* AboutProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProtocols.swift; sourceTree = "<group>"; };
+		AA9C7E1425AB0E3B005A04AE /* AboutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutInteractor.swift; sourceTree = "<group>"; };
+		AA9C7E1525AB0E3B005A04AE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		AA9C7E1625AB0E3B005A04AE /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		DFA87B65178B0D54D6B617EA /* Pods-muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.debug.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D781C48D2CD6162E6F581 /* Pods-muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.release.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +246,7 @@
 		AA984C0D257E35840008E31D /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				AA9C7E1025AAFC9D005A04AE /* feature-about */,
 				AA99AAFD257FC4E60050C92D /* feature-app-service */,
 				AA984C0E257E358E0008E31D /* feature-main */,
 			);
@@ -343,6 +356,19 @@
 			path = Localize;
 			sourceTree = "<group>";
 		};
+		AA9C7E1025AAFC9D005A04AE /* feature-about */ = {
+			isa = PBXGroup;
+			children = (
+				AA9C7E1125AB0E3B005A04AE /* AboutPresenter.swift */,
+				AA9C7E1225AB0E3B005A04AE /* AboutRouter.swift */,
+				AA9C7E1325AB0E3B005A04AE /* AboutProtocols.swift */,
+				AA9C7E1425AB0E3B005A04AE /* AboutInteractor.swift */,
+				AA9C7E1525AB0E3B005A04AE /* AboutView.swift */,
+				AA9C7E1625AB0E3B005A04AE /* AboutView.xib */,
+			);
+			path = "feature-about";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */,
+				AA9C7E1C25AB0E3B005A04AE /* AboutView.xib in Resources */,
 				AA82A35625885B16005932A6 /* adhan_mecca_1.mp3 in Resources */,
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
 				AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */,
@@ -486,11 +513,14 @@
 				AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */,
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
+				AA9C7E1725AB0E3B005A04AE /* AboutPresenter.swift in Sources */,
+				AA9C7E1825AB0E3B005A04AE /* AboutRouter.swift in Sources */,
 				AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */,
 				AA99AB09257FC9750050C92D /* Localizable.swift in Sources */,
 				AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */,
 				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
 				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
+				AA9C7E1925AB0E3B005A04AE /* AboutProtocols.swift in Sources */,
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
@@ -507,9 +537,11 @@
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
+				AA9C7E1B25AB0E3B005A04AE /* AboutView.swift in Sources */,
 				AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */,
 				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
+				AA9C7E1A25AB0E3B005A04AE /* AboutInteractor.swift in Sources */,
 				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
 				AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */,
 				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,

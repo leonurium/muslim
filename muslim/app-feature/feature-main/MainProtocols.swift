@@ -16,6 +16,7 @@ protocol MainPresenterToView: class {
     func reloadTableView()
     func updateIntevalView(remaining: String)
     func updateQiblaView(angle: Double)
+    func didTapInfo()
 }
 
 // MARK: Interactor -
@@ -30,6 +31,7 @@ protocol MainPresenterToInteractor: class {
 // MARK: Router -
 protocol MainPresenterToRouter: class {
     static func createMainModule() -> UIViewController
+    func navigateToInfo(from: MainPresenterToView?)
 }
 
 // MARK: Presenter -
@@ -43,6 +45,7 @@ protocol MainViewToPresenter: class {
     func cellForRowClock() -> MainClock?
     func cellForRowTimeTable() -> MainTimeTable?
     func cellForRowQibla() -> MainQibla?
+    func navigateToInfo()
 }
 
 protocol MainInteractorToPresenter: class {

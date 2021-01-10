@@ -27,4 +27,11 @@ class MainRouter: MainPresenterToRouter {
         MainRouter.mediator = mediator
         return view
     }
+    
+    func navigateToInfo(from: MainPresenterToView?) {
+        if let vc = from as? UIViewController {
+            let nav = UINavigationController(rootViewController: AboutRouter.createAboutModule())
+            vc.present(nav, animated: true, completion: nil)
+        }
+    }
 }

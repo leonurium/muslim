@@ -145,6 +145,10 @@ class MainPresenter: MainViewToPresenter {
         )
     }
     
+    func navigateToInfo() {
+        router?.navigateToInfo(from: view)
+    }
+    
     @objc func didChangeTimeInterval() {
         if isPlus {
             remaining += 1

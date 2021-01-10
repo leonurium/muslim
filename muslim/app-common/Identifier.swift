@@ -21,6 +21,9 @@ enum Identifier {
         case image_background_2
         case image_compass_1
         case image_qibla_direction_1
+        
+        // MARK: - Assets Button
+        case btn_info
     }
     
     public enum soundName: String {

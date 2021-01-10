@@ -36,6 +36,10 @@ class MainView: UIViewController, MainPresenterToView {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.backgroundColor = .clear
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.tintColor  = UIMColor.white.get()
+        
+        let btn_info = UIBarButtonItem(image: UIImage(identifierName: .btn_info), style: .plain, target: self, action: #selector(didTapInfo))
+        navigationItem.rightBarButtonItems = [btn_info]
         
         tableview.dataSource = self
         tableview.delegate = self
@@ -47,8 +51,6 @@ class MainView: UIViewController, MainPresenterToView {
         let imageView = UIImageView()
         imageView.image = UIImage(identifierName: .image_background_2)
         tableview.backgroundView = imageView
-        
-        navigationController?.navigationBar.isHidden = false
     }
     
     func reloadTableView() {
@@ -67,6 +69,11 @@ class MainView: UIViewController, MainPresenterToView {
         if let cell = tableview.cellForRow(at: IndexPath(row: 2, section: 0)) as? MainQiblaCell {
             cell.updateQibla(angle: angle)
         }
+    }
+    
+    @objc
+    func didTapInfo() {
+        presenter?.navigateToInfo()
     }
 }
 
