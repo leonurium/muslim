@@ -105,9 +105,9 @@ class MainPresenter: MainViewToPresenter {
                     var soundName: String?
                     
                     switch prayer {
-                    case .fajr: soundName = Identifier.soundName.adhan_fajr_1.rawValue + ".mp3"
+                    case .fajr: soundName = Identifier.soundName.adhan_fajr_1.rawValue + SCExt.mp3.rawValue
                     case .sunrise: soundName = nil
-                    case .asr, .dhuhr, .isha, .maghrib: soundName = Identifier.soundName.adhan_mecca_1.rawValue + ".mp3"
+                    case .asr, .dhuhr, .isha, .maghrib: soundName = Identifier.soundName.adhan_mecca_1.rawValue + SCExt.mp3.rawValue
                     }
 //                    LocalNotificationX.shared.addNotification(
 //                        title: String(describing: prayer).capitalized,
