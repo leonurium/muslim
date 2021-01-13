@@ -7,6 +7,7 @@ target 'muslim' do
 
   # Pods for muslim
   pod 'Adhan'
+  pod 'PrayerIDN'
   pod 'Siren'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'

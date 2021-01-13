@@ -20,8 +20,7 @@ class MainPresenter: MainViewToPresenter {
     
     func didLoad() {
         view?.setupViews()
-        interactor?.getPrayerTimes()
-        interactor?.getQiblaDirection()
+        interactor?.requestData()
     }
     
     func numberOfRowsInSection() -> Int {

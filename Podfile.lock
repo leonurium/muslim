@@ -71,6 +71,7 @@ PODS:
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
+  - PrayerIDN (0.1.0)
   - PromisesObjC (1.2.11)
   - Siren (5.6.2)
   - SPPermissions (4.1.4):
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - Adhan
   - Firebase/Analytics
   - Firebase/Crashlytics
+  - PrayerIDN
   - Siren
   - SPPermissions
   - SPPermissions/Location
@@ -100,6 +102,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - nanopb
+    - PrayerIDN
     - PromisesObjC
     - Siren
     - SPPermissions
@@ -116,10 +119,11 @@ SPEC CHECKSUMS:
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
+  PrayerIDN: fdd0337f332db9f750c80e5544550530fe8e34cc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Siren: 4f98be44f7d66e80513dc3e7061898cd63935bd5
   SPPermissions: 9fafa3125a66ec00e36a4c8e3ad8684f5499afbc
 
-PODFILE CHECKSUM: b3f4fb90a25d8cd2a768bf4a5e0de23d10b40b14
+PODFILE CHECKSUM: 9f67f3c864d914f9d367e80cffcbec1a8cdd65d2
 
 COCOAPODS: 1.10.0
