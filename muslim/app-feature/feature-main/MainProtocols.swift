@@ -17,6 +17,8 @@ protocol MainPresenterToView: class {
     func updateIntevalView(remaining: String)
     func updateQiblaView(angle: Double)
     func didTapInfo()
+    func showLoaderIndicator()
+    func dismissLoaderIndicator()
 }
 
 // MARK: Interactor -

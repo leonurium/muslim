@@ -21,8 +21,6 @@
 		AA686CA1258078F400040110 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA0258078F400040110 /* Constant.swift */; };
 		AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA686CA62580980200040110 /* MainTimeTableCell.xib */; };
 		AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA92580980F00040110 /* MainTimeTableCell.swift */; };
-		AA82A35525885B16005932A6 /* adhan_fajr_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA82A35325885B16005932A6 /* adhan_fajr_1.mp3 */; };
-		AA82A35625885B16005932A6 /* adhan_mecca_1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA82A35425885B16005932A6 /* adhan_mecca_1.mp3 */; };
 		AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984BC1257E1B560008E31D /* AppDelegate.swift */; };
 		AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA984BCA257E1B560008E31D /* Assets.xcassets */; };
 		AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C0F257E35A90008E31D /* MainPresenter.swift */; };
@@ -57,6 +55,9 @@
 		AA9C7E1B25AB0E3B005A04AE /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C7E1525AB0E3B005A04AE /* AboutView.swift */; };
 		AA9C7E1C25AB0E3B005A04AE /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9C7E1625AB0E3B005A04AE /* AboutView.xib */; };
 		AAA2573E25B16555004B4B50 /* PrayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2573D25B16555004B4B50 /* PrayerManager.swift */; };
+		AAA2575525B1C648004B4B50 /* adhan_fajr_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AAA2575325B1C648004B4B50 /* adhan_fajr_1.wav */; };
+		AAA2575625B1C648004B4B50 /* adhan_mecca_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AAA2575425B1C648004B4B50 /* adhan_mecca_1.wav */; };
+		AAA2575925B1D55D004B4B50 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2575825B1D55D004B4B50 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +75,6 @@
 		AA686CA0258078F400040110 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AA686CA62580980200040110 /* MainTimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTimeTableCell.xib; sourceTree = "<group>"; };
 		AA686CA92580980F00040110 /* MainTimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimeTableCell.swift; sourceTree = "<group>"; };
-		AA82A35325885B16005932A6 /* adhan_fajr_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adhan_fajr_1.mp3; sourceTree = "<group>"; };
-		AA82A35425885B16005932A6 /* adhan_mecca_1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = adhan_mecca_1.mp3; sourceTree = "<group>"; };
 		AA984BBE257E1B560008E31D /* muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muslim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA984BC1257E1B560008E31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA984BCA257E1B560008E31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +111,9 @@
 		AA9C7E1525AB0E3B005A04AE /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		AA9C7E1625AB0E3B005A04AE /* AboutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		AAA2573D25B16555004B4B50 /* PrayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerManager.swift; sourceTree = "<group>"; };
+		AAA2575325B1C648004B4B50 /* adhan_fajr_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = adhan_fajr_1.wav; sourceTree = "<group>"; };
+		AAA2575425B1C648004B4B50 /* adhan_mecca_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = adhan_mecca_1.wav; sourceTree = "<group>"; };
+		AAA2575825B1D55D004B4B50 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		DFA87B65178B0D54D6B617EA /* Pods-muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.debug.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D781C48D2CD6162E6F581 /* Pods-muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.release.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,8 +193,8 @@
 		AA82A35225885A07005932A6 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				AA82A35325885B16005932A6 /* adhan_fajr_1.mp3 */,
-				AA82A35425885B16005932A6 /* adhan_mecca_1.mp3 */,
+				AAA2575325B1C648004B4B50 /* adhan_fajr_1.wav */,
+				AAA2575425B1C648004B4B50 /* adhan_mecca_1.wav */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -287,6 +289,7 @@
 				AA984C6A257E6A610008E31D /* String+Ext.swift */,
 				AA984C70257E700E0008E31D /* UIColor+Ext.swift */,
 				AA686C9C258075CB00040110 /* Int+Ext.swift */,
+				AAA2575825B1D55D004B4B50 /* UIViewController+Ext.swift */,
 			);
 			path = "app-extension";
 			sourceTree = "<group>";
@@ -434,15 +437,15 @@
 			files = (
 				AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */,
 				AA9C7E1C25AB0E3B005A04AE /* AboutView.xib in Resources */,
-				AA82A35625885B16005932A6 /* adhan_mecca_1.mp3 in Resources */,
+				AAA2575525B1C648004B4B50 /* adhan_fajr_1.wav in Resources */,
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
 				AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */,
 				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
 				AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */,
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
+				AAA2575625B1C648004B4B50 /* adhan_mecca_1.wav in Resources */,
 				AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */,
-				AA82A35525885B16005932A6 /* adhan_fajr_1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +530,7 @@
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
+				AAA2575925B1D55D004B4B50 /* UIViewController+Ext.swift in Sources */,
 				AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,

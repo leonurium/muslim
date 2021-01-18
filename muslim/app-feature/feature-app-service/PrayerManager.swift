@@ -30,6 +30,7 @@ class PrayerManager: NSObject {
     }(CLLocationManager())
     
     weak var delegate: PrayerManagerDelegate?
+    var requestDate: Date = Date()
     private var timer : Timer?
     private var isAllowRequest: Bool = true
     private var lastPrayerToday: Date?
@@ -48,12 +49,13 @@ class PrayerManager: NSObject {
         let now = Date()
         let cal = Calendar(identifier: Calendar.Identifier.iso8601)
         var date = cal.dateComponents([.year, .month, .day], from: now)
+        requestDate = now
         
         if let lastPrayer = lastPrayerToday {
             if now >= lastPrayer {
                 if let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: now) {
+                    requestDate = tomorrow
                     date = cal.dateComponents([.year, .month, .day], from: tomorrow)
-                    lastPrayerToday = nil
                 }
             }
         }
@@ -70,10 +72,12 @@ class PrayerManager: NSObject {
                 
                 if let prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params) {
                     let times = MuslimPrayerTimes(fajr: prayers.fajr, sunrise: prayers.sunrise, dhuhr: prayers.dhuhr, asr: prayers.asr, maghrib: prayers.maghrib, isha: prayers.isha)
-                    if now >= times.isha {
+                    if now >= times.isha, self.lastPrayerToday == nil {
                         self.lastPrayerToday = times.isha
                         self.getPrayerTimes(location: location)
                         return
+                    } else {
+                        self.lastPrayerToday = nil
                     }
                     self.delegate?.didGetTimes(times: times)
                 
@@ -142,11 +146,13 @@ extension PrayerManager: PrayerDelegate {
         let muslimTimes = MuslimPrayerTimes(fajr: times.fajr, sunrise: times.sunrise, dhuhr: times.dhuhr, asr: times.asr, maghrib: times.maghrib, isha: times.isha)
         
         let now = Date()
-        if now >= muslimTimes.isha {
+        if now >= muslimTimes.isha, lastPrayerToday == nil {
             lastPrayerToday = muslimTimes.isha
             guard let location = locationManager.location else { return }
             getPrayerTimes(location: location)
             return
+        } else {
+            lastPrayerToday = nil
         }
         delegate?.didGetTimes(times: muslimTimes)
     }

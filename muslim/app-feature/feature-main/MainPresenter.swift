@@ -20,6 +20,7 @@ class MainPresenter: MainViewToPresenter {
     
     func didLoad() {
         view?.setupViews()
+        view?.showLoaderIndicator()
         interactor?.requestData()
     }
     
@@ -28,10 +29,14 @@ class MainPresenter: MainViewToPresenter {
     }
     
     func cellForRowClock() -> MainClock? {
+        debugLog(PrayerManager.shared.requestDate)
+        debugLog(times)
+        debugLog(times?.currentPrayer(at: PrayerManager.shared.requestDate))
+        debugLog(times?.nextPrayer(at: PrayerManager.shared.requestDate))
         if
             let prayerTimes = times,
-            let currentPrayer = prayerTimes.currentPrayer(),
-            let nextPrayer = prayerTimes.nextPrayer() {
+            let currentPrayer = prayerTimes.currentPrayer(at: PrayerManager.shared.requestDate),
+            let nextPrayer = prayerTimes.nextPrayer(at: PrayerManager.shared.requestDate) {
             
             let currentPrayerTime = prayerTimes.time(for: currentPrayer)
             let nextPrayerTime = prayerTimes.time(for: nextPrayer)
@@ -82,8 +87,8 @@ class MainPresenter: MainViewToPresenter {
     func cellForRowTimeTable() -> MainTimeTable? {
         if
             let prayerTimes = times,
-            let currentPrayer = prayerTimes.currentPrayer(),
-            let nextPrayer = prayerTimes.nextPrayer() {
+            let currentPrayer = prayerTimes.currentPrayer(at: PrayerManager.shared.requestDate),
+            let nextPrayer = prayerTimes.nextPrayer(at: PrayerManager.shared.requestDate) {
             
             //delete all notif
             LocalNotificationX.shared.cancelAllNotifications()
@@ -104,9 +109,9 @@ class MainPresenter: MainViewToPresenter {
                     var soundName: String?
                     
                     switch prayer {
-                    case .fajr: soundName = Identifier.soundName.adhan_fajr_1.rawValue + SCExt.mp3.rawValue
+                    case .fajr: soundName = Identifier.soundName.adhan_fajr_1.rawValue + SCExt.wav.rawValue
                     case .sunrise: soundName = nil
-                    case .asr, .dhuhr, .isha, .maghrib: soundName = Identifier.soundName.adhan_mecca_1.rawValue + SCExt.mp3.rawValue
+                    case .asr, .dhuhr, .isha, .maghrib: soundName = Identifier.soundName.adhan_mecca_1.rawValue + SCExt.wav.rawValue
                     }
 //                    LocalNotificationX.shared.addNotification(
 //                        title: String(describing: prayer).capitalized,
@@ -175,17 +180,22 @@ class MainPresenter: MainViewToPresenter {
 extension MainPresenter: MainInteractorToPresenter {
     func didGetPrayerTimes(times: MuslimPrayerTimes) {
         self.times = times
+        view?.dismissLoaderIndicator()
         view?.reloadTableView()
     }
     
     func failGetPrayerTimes(title: String, message: String) {
         debugLog(message)
+        view?.dismissLoaderIndicator()
     }
     
     func failGetLocation(title: String, message: String) {
         debugLog(message)
+        view?.dismissLoaderIndicator()
     }
     
     func didGetQiblaDirection(angle: Double) {
-        view?.updateQiblaView(angle: angle)    }
+        view?.dismissLoaderIndicator()
+        view?.updateQiblaView(angle: angle)
+    }
 }

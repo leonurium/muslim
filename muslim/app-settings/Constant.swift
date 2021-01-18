@@ -13,6 +13,7 @@ enum StringConstant: String {
     
     enum Ext: String {
         case mp3 = ".mp3"
+        case wav = ".wav"
     }
 }
 
