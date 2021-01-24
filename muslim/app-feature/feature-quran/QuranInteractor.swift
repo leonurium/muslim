@@ -9,10 +9,19 @@ import Foundation
 
 class QuranInteractor: QuranPresenterToInteractor {
     weak var presenter: QuranInteractorToPresenter?
+    private var quran: QuranManager
     
-    func getQuran(surahNumber: Int? = nil, ayahNumber: [Int] = []) {
-        let quran = QuranManager(surahNumber: surahNumber, ayahNumber: ayahNumber)
+    init() {
+        quran = QuranManager()
         quran.delegate = self
+    }
+    
+    func getChapter(chapter_id: Int?) {
+        quran.getChapter(chapter_id: chapter_id)
+    }
+    
+    func getVerse(chapter_id: Int, verse_ids: [Int]) {
+        quran.getVerse(chapter_id: chapter_id, verse_ids: verse_ids)
     }
 }
 

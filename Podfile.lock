@@ -71,7 +71,7 @@ PODS:
     - nanopb/encode (= 2.30907.0)
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
-  - PrayerIDN (1.1.2)
+  - PrayerIDN (1.1.3)
   - PromisesObjC (1.2.12)
   - Siren (5.7.1)
   - SPPermissions (5.4.1):
@@ -119,7 +119,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleUtilities: d866834472f1324d080496bc67ab3ce5d0d46027
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
-  PrayerIDN: 52e66d4ffba19a8543ef668ed2c76151641ed38e
+  PrayerIDN: b7ce64e1143ba3ef4a96d212fd328bb53da83d53
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Siren: 76ac728f4f2f4a3576c322272e94a0e37955664f
   SPPermissions: a093e8045c7aeb23a08acda6d288e3543f27f8fa

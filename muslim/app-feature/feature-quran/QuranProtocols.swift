@@ -19,7 +19,8 @@ protocol QuranPresenterToView: class {
 protocol QuranPresenterToInteractor: class {
     var presenter: QuranInteractorToPresenter?  { get set }
     
-    func getQuran(surahNumber: Int?, ayahNumber: [Int])
+    func getChapter(chapter_id: Int?)
+    func getVerse(chapter_id: Int, verse_ids: [Int])
 }
 
 
