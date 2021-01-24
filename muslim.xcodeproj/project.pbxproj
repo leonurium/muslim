@@ -14,6 +14,16 @@
 		AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343832585BA24007DE320 /* SceneDelegates.swift */; };
 		AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */; };
 		AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0503B8257F8CD9007A1CD4 /* Parser.swift */; };
+		AA16EDE125BD6E27007F77C9 /* QuranDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDE025BD6E27007F77C9 /* QuranDefaultCell.swift */; };
+		AA16EDE525BDAFF2007F77C9 /* QuranDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA16EDE425BDAFF2007F77C9 /* QuranDefaultCell.xib */; };
+		AA16EDEE25BDCB0E007F77C9 /* QuranVersePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDE825BDCB0E007F77C9 /* QuranVersePresenter.swift */; };
+		AA16EDEF25BDCB0E007F77C9 /* QuranVerseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDE925BDCB0E007F77C9 /* QuranVerseRouter.swift */; };
+		AA16EDF025BDCB0E007F77C9 /* QuranVerseProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDEA25BDCB0E007F77C9 /* QuranVerseProtocols.swift */; };
+		AA16EDF125BDCB0E007F77C9 /* QuranVerseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDEB25BDCB0E007F77C9 /* QuranVerseInteractor.swift */; };
+		AA16EDF225BDCB0E007F77C9 /* QuranVerseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDEC25BDCB0E007F77C9 /* QuranVerseView.swift */; };
+		AA16EDF325BDCB0E007F77C9 /* QuranVerseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA16EDED25BDCB0E007F77C9 /* QuranVerseView.xib */; };
+		AA16EDF725BDCB53007F77C9 /* QuranVerseDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16EDF625BDCB53007F77C9 /* QuranVerseDefaultCell.swift */; };
+		AA16EDFB25BDCB5F007F77C9 /* QuranVerseDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA16EDFA25BDCB5F007F77C9 /* QuranVerseDefaultCell.xib */; };
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
 		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
 		AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C17258271FA00B205E5 /* LocalNotificationX.swift */; };
@@ -75,6 +85,16 @@
 		AA0343832585BA24007DE320 /* SceneDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegates.swift; sourceTree = "<group>"; };
 		AA03438B25861FE5007DE320 /* AppLifecycleMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLifecycleMediator.swift; sourceTree = "<group>"; };
 		AA0503B8257F8CD9007A1CD4 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		AA16EDE025BD6E27007F77C9 /* QuranDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranDefaultCell.swift; sourceTree = "<group>"; };
+		AA16EDE425BDAFF2007F77C9 /* QuranDefaultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranDefaultCell.xib; sourceTree = "<group>"; };
+		AA16EDE825BDCB0E007F77C9 /* QuranVersePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVersePresenter.swift; sourceTree = "<group>"; };
+		AA16EDE925BDCB0E007F77C9 /* QuranVerseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVerseRouter.swift; sourceTree = "<group>"; };
+		AA16EDEA25BDCB0E007F77C9 /* QuranVerseProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVerseProtocols.swift; sourceTree = "<group>"; };
+		AA16EDEB25BDCB0E007F77C9 /* QuranVerseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVerseInteractor.swift; sourceTree = "<group>"; };
+		AA16EDEC25BDCB0E007F77C9 /* QuranVerseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVerseView.swift; sourceTree = "<group>"; };
+		AA16EDED25BDCB0E007F77C9 /* QuranVerseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranVerseView.xib; sourceTree = "<group>"; };
+		AA16EDF625BDCB53007F77C9 /* QuranVerseDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVerseDefaultCell.swift; sourceTree = "<group>"; };
+		AA16EDFA25BDCB5F007F77C9 /* QuranVerseDefaultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranVerseDefaultCell.xib; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
 		AA227C17258271FA00B205E5 /* LocalNotificationX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationX.swift; path = "muslim/app-settings/LocalNotificationX.swift"; sourceTree = SOURCE_ROOT; };
@@ -180,6 +200,38 @@
 			path = Mediator;
 			sourceTree = "<group>";
 		};
+		AA16EDDF25BD6E12007F77C9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA16EDE025BD6E27007F77C9 /* QuranDefaultCell.swift */,
+				AA16EDE425BDAFF2007F77C9 /* QuranDefaultCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		AA16EDE725BDCAF4007F77C9 /* feature-quran-verse */ = {
+			isa = PBXGroup;
+			children = (
+				AA16EDF525BDCB1A007F77C9 /* cell */,
+				AA16EDE825BDCB0E007F77C9 /* QuranVersePresenter.swift */,
+				AA16EDE925BDCB0E007F77C9 /* QuranVerseRouter.swift */,
+				AA16EDEA25BDCB0E007F77C9 /* QuranVerseProtocols.swift */,
+				AA16EDEB25BDCB0E007F77C9 /* QuranVerseInteractor.swift */,
+				AA16EDEC25BDCB0E007F77C9 /* QuranVerseView.swift */,
+				AA16EDED25BDCB0E007F77C9 /* QuranVerseView.xib */,
+			);
+			path = "feature-quran-verse";
+			sourceTree = "<group>";
+		};
+		AA16EDF525BDCB1A007F77C9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				AA16EDF625BDCB53007F77C9 /* QuranVerseDefaultCell.swift */,
+				AA16EDFA25BDCB5F007F77C9 /* QuranVerseDefaultCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		AA227C15258271CD00B205E5 /* app-helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +259,7 @@
 		AA6B576725B54ACE006A589A /* feature-quran */ = {
 			isa = PBXGroup;
 			children = (
+				AA16EDDF25BD6E12007F77C9 /* cell */,
 				AA6B576825B54AE9006A589A /* QuranPresenter.swift */,
 				AA6B576925B54AE9006A589A /* QuranRouter.swift */,
 				AA6B576A25B54AE9006A589A /* QuranProtocols.swift */,
@@ -277,6 +330,7 @@
 		AA984C0D257E35840008E31D /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				AA16EDE725BDCAF4007F77C9 /* feature-quran-verse */,
 				AA6B576725B54ACE006A589A /* feature-quran */,
 				AA9C7E1025AAFC9D005A04AE /* feature-about */,
 				AA99AAFD257FC4E60050C92D /* feature-app-service */,
@@ -466,11 +520,14 @@
 			files = (
 				AA6B577325B54AE9006A589A /* QuranView.xib in Resources */,
 				AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */,
+				AA16EDFB25BDCB5F007F77C9 /* QuranVerseDefaultCell.xib in Resources */,
 				AA9C7E1C25AB0E3B005A04AE /* AboutView.xib in Resources */,
 				AAA2575525B1C648004B4B50 /* adhan_fajr_1.wav in Resources */,
+				AA16EDE525BDAFF2007F77C9 /* QuranDefaultCell.xib in Resources */,
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
 				AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */,
 				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
+				AA16EDF325BDCB0E007F77C9 /* QuranVerseView.xib in Resources */,
 				AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */,
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
@@ -548,6 +605,7 @@
 			files = (
 				AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */,
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
+				AA16EDF125BDCB0E007F77C9 /* QuranVerseInteractor.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
 				AA6B577025B54AE9006A589A /* QuranProtocols.swift in Sources */,
 				AA9C7E1725AB0E3B005A04AE /* AboutPresenter.swift in Sources */,
@@ -555,13 +613,16 @@
 				AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */,
 				AA99AB09257FC9750050C92D /* Localizable.swift in Sources */,
 				AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */,
+				AA16EDF225BDCB0E007F77C9 /* QuranVerseView.swift in Sources */,
 				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
 				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
 				AA9C7E1925AB0E3B005A04AE /* AboutProtocols.swift in Sources */,
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
 				AA6B576F25B54AE9006A589A /* QuranRouter.swift in Sources */,
+				AA16EDEF25BDCB0E007F77C9 /* QuranVerseRouter.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
+				AA16EDEE25BDCB0E007F77C9 /* QuranVersePresenter.swift in Sources */,
 				AAA2575925B1D55D004B4B50 /* UIViewController+Ext.swift in Sources */,
 				AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
@@ -577,6 +638,7 @@
 				AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
+				AA16EDE125BD6E27007F77C9 /* QuranDefaultCell.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
 				AA9C7E1B25AB0E3B005A04AE /* AboutView.swift in Sources */,
 				AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */,
@@ -584,9 +646,11 @@
 				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
 				AA9C7E1A25AB0E3B005A04AE /* AboutInteractor.swift in Sources */,
+				AA16EDF025BDCB0E007F77C9 /* QuranVerseProtocols.swift in Sources */,
 				AAA2573E25B16555004B4B50 /* PrayerManager.swift in Sources */,
 				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
 				AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */,
+				AA16EDF725BDCB53007F77C9 /* QuranVerseDefaultCell.swift in Sources */,
 				AA6B577225B54AE9006A589A /* QuranView.swift in Sources */,
 				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,
 				AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */,

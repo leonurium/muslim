@@ -21,6 +21,7 @@ enum Identifier {
         case image_background_2
         case image_compass_1
         case image_qibla_direction_1
+        case image_paper_navy
         
         // MARK: - Assets Button
         case btn_info

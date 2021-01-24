@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pNS-Eu-qha" customClass="QuranDefaultCell" customModule="muslim" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pNS-Eu-qha" id="FLv-65-z3H">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="oHD-TF-Zr4">
+                        <rect key="frame" x="16" y="8" width="382" height="157"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhB-St-PIj" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="oXG-EY-Nhm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GJy-P8-Xbd">
+                                <rect key="frame" x="101" y="0.0" width="130" height="157"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sh-Wh-eFO" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="74.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBg-hm-jzG" customClass="UIMLabelBody" customModule="muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="82.5" width="130" height="74.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezd-6I-sgk" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
+                                <rect key="frame" x="282" y="0.0" width="100" height="157"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="b0n-VU-NMm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="oHD-TF-Zr4" firstAttribute="top" secondItem="FLv-65-z3H" secondAttribute="top" constant="8" id="AxI-5h-ESc"/>
+                    <constraint firstAttribute="trailing" secondItem="oHD-TF-Zr4" secondAttribute="trailing" constant="16" id="JBu-0h-ndB"/>
+                    <constraint firstAttribute="bottom" secondItem="oHD-TF-Zr4" secondAttribute="bottom" constant="8" id="NBm-ov-Twn"/>
+                    <constraint firstItem="oHD-TF-Zr4" firstAttribute="leading" secondItem="FLv-65-z3H" secondAttribute="leading" constant="16" id="SdS-dC-eHM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lbl_arabic" destination="ezd-6I-sgk" id="Owg-NE-f7P"/>
+                <outlet property="lbl_body" destination="cBg-hm-jzG" id="8Gc-fm-vNb"/>
+                <outlet property="lbl_id" destination="HhB-St-PIj" id="FOR-BP-Hkd"/>
+                <outlet property="lbl_title" destination="8sh-Wh-eFO" id="RF0-J1-kLl"/>
+                <outlet property="stack_container" destination="oHD-TF-Zr4" id="mne-iJ-DsK"/>
+                <outlet property="stack_sub_container" destination="GJy-P8-Xbd" id="sAp-TE-VQ2"/>
+            </connections>
+            <point key="canvasLocation" x="-171.01449275362319" y="69.308035714285708"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -19,4 +19,8 @@ enum UIMColor: String {
     func get() -> UIColor {
         return self.rawValue.hexToUIColor()
     }
+    
+    static func brandColor() -> UIColor {
+        return UIMColor.mine_shaft.get()
+    }
 }

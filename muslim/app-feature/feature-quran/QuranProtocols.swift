@@ -12,7 +12,12 @@ import UIKit
 protocol QuranPresenterToView: class {
     var presenter: QuranViewToPresenter? { get set }
     
-    func updateLabel(text: String)
+    func setupViews()
+    func showLoaderIndicator()
+    func dismissLoaderIndicator()
+    func showAlert(title: String, message: String, okCompletion: (() -> Void)?)
+    func showAlertConfirm(title: String, message: String, okCompletion: (() -> Void)?, cancleCompletion: (() -> Void)?)
+    func reloadTableView()
 }
 
 // MARK: Interactor -
@@ -36,6 +41,8 @@ protocol QuranViewToPresenter: class {
     var router: QuranPresenterToRouter? {get set}
     
     func didLoad()
+    func numberOfRowsInSection() -> Int
+    func cellForRowAt(indexPath: IndexPath) -> QuranManager.QuranChapter
 }
 
 protocol QuranInteractorToPresenter: class {

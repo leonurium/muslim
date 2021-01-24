@@ -12,27 +12,53 @@ class QuranPresenter: QuranViewToPresenter {
     var interactor: QuranPresenterToInteractor?
     var router: QuranPresenterToRouter?
     
-    private var surahs: [String] = []
-    private var ayahs: [String] = []
+    private var quranChapters: [QuranManager.QuranChapter] = []
     
     func didLoad() {
-        interactor?.getVerse(chapter_id: 2, verse_ids: [1,2,3,4,5,6,7,8,9])
-//        interactor?.getChapter(chapter_id: nil)
+        view?.setupViews()
+        view?.showLoaderIndicator()
+        interactor?.getChapter(chapter_id: nil)
     }
-  
+    
+    func numberOfRowsInSection() -> Int {
+        quranChapters.count
+    }
+    
+    func cellForRowAt(indexPath: IndexPath) -> QuranManager.QuranChapter {
+        quranChapters[indexPath.row]
+    }
+    
+    private func inputChapters(chap: QuranManager.QuranChapter) {
+        if quranChapters.contains(chap),
+           let index = quranChapters.firstIndex(of: chap) {
+            
+            for verse in chap.verses {
+                if !quranChapters[index].verses.contains(verse) {
+                    quranChapters[index].verses.append(verse)
+                }
+            }
+            
+        } else {
+            quranChapters.append(chap)
+        }
+    }
 }
 
 extension QuranPresenter: QuranInteractorToPresenter {
     func didGetQuran(chapters: [QuranManager.QuranChapter]) {
-        if let verses = chapters.first?.verses {
-            let text = verses.map({ $0.verse }).joined()
-            DispatchQueue.main.async {
-                self.view?.updateLabel(text: text)
-            }
+        for chapter in chapters {
+            inputChapters(chap: chapter)
+        }
+        DispatchQueue.main.async {
+            self.view?.dismissLoaderIndicator()
+            self.view?.reloadTableView()
         }
     }
     
     func failGetQuran(title: String, error: String) {
-        debugLog(error)
+        DispatchQueue.main.async {
+            self.view?.dismissLoaderIndicator()
+            self.view?.showAlert(title: title, message: error, okCompletion: nil)
+        }
     }
 }

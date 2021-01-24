@@ -10,6 +10,7 @@ import Foundation
 enum StringConstant: String {
     case format_remainig_time_minus = "-%02i:%02i:%02i"
     case format_remainig_time_plus = "+%02i:%02i:%02i"
+    case bismillah = "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"
     
     enum Ext: String {
         case mp3 = ".mp3"

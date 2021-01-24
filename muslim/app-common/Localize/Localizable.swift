@@ -20,7 +20,13 @@ enum Localizable {
         case not_found_current_location
         case fail_get_prayer_times
     }
+    
+    enum Button: String, LocalizableDelegate {
+        case ok
+        case cancel
+    }
 }
 
 typealias LTitleAlert = Localizable.TitleAlert
 typealias LError = Localizable.Error
+typealias LButton = Localizable.Button
