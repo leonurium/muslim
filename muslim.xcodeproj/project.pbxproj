@@ -17,10 +17,17 @@
 		AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA227C082581CFED00B205E5 /* MainQiblaCell.xib */; };
 		AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */; };
 		AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA227C17258271FA00B205E5 /* LocalNotificationX.swift */; };
+		AA504AEE25B9D5E200CFAD60 /* QuranManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA504AED25B9D5E200CFAD60 /* QuranManager.swift */; };
 		AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686C9C258075CB00040110 /* Int+Ext.swift */; };
 		AA686CA1258078F400040110 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA0258078F400040110 /* Constant.swift */; };
 		AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA686CA62580980200040110 /* MainTimeTableCell.xib */; };
 		AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA686CA92580980F00040110 /* MainTimeTableCell.swift */; };
+		AA6B576E25B54AE9006A589A /* QuranPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B576825B54AE9006A589A /* QuranPresenter.swift */; };
+		AA6B576F25B54AE9006A589A /* QuranRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B576925B54AE9006A589A /* QuranRouter.swift */; };
+		AA6B577025B54AE9006A589A /* QuranProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B576A25B54AE9006A589A /* QuranProtocols.swift */; };
+		AA6B577125B54AE9006A589A /* QuranInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B576B25B54AE9006A589A /* QuranInteractor.swift */; };
+		AA6B577225B54AE9006A589A /* QuranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B576C25B54AE9006A589A /* QuranView.swift */; };
+		AA6B577325B54AE9006A589A /* QuranView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6B576D25B54AE9006A589A /* QuranView.xib */; };
 		AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984BC1257E1B560008E31D /* AppDelegate.swift */; };
 		AA984BCB257E1B560008E31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA984BCA257E1B560008E31D /* Assets.xcassets */; };
 		AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA984C0F257E35A90008E31D /* MainPresenter.swift */; };
@@ -71,10 +78,17 @@
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
 		AA227C17258271FA00B205E5 /* LocalNotificationX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationX.swift; path = "muslim/app-settings/LocalNotificationX.swift"; sourceTree = SOURCE_ROOT; };
+		AA504AED25B9D5E200CFAD60 /* QuranManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranManager.swift; sourceTree = "<group>"; };
 		AA686C9C258075CB00040110 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		AA686CA0258078F400040110 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AA686CA62580980200040110 /* MainTimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTimeTableCell.xib; sourceTree = "<group>"; };
 		AA686CA92580980F00040110 /* MainTimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimeTableCell.swift; sourceTree = "<group>"; };
+		AA6B576825B54AE9006A589A /* QuranPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranPresenter.swift; sourceTree = "<group>"; };
+		AA6B576925B54AE9006A589A /* QuranRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranRouter.swift; sourceTree = "<group>"; };
+		AA6B576A25B54AE9006A589A /* QuranProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranProtocols.swift; sourceTree = "<group>"; };
+		AA6B576B25B54AE9006A589A /* QuranInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranInteractor.swift; sourceTree = "<group>"; };
+		AA6B576C25B54AE9006A589A /* QuranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranView.swift; sourceTree = "<group>"; };
+		AA6B576D25B54AE9006A589A /* QuranView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranView.xib; sourceTree = "<group>"; };
 		AA984BBE257E1B560008E31D /* muslim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muslim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA984BC1257E1B560008E31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA984BCA257E1B560008E31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +204,19 @@
 			path = "app-settings";
 			sourceTree = "<group>";
 		};
+		AA6B576725B54ACE006A589A /* feature-quran */ = {
+			isa = PBXGroup;
+			children = (
+				AA6B576825B54AE9006A589A /* QuranPresenter.swift */,
+				AA6B576925B54AE9006A589A /* QuranRouter.swift */,
+				AA6B576A25B54AE9006A589A /* QuranProtocols.swift */,
+				AA6B576B25B54AE9006A589A /* QuranInteractor.swift */,
+				AA6B576C25B54AE9006A589A /* QuranView.swift */,
+				AA6B576D25B54AE9006A589A /* QuranView.xib */,
+			);
+			path = "feature-quran";
+			sourceTree = "<group>";
+		};
 		AA82A35225885A07005932A6 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +277,7 @@
 		AA984C0D257E35840008E31D /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				AA6B576725B54ACE006A589A /* feature-quran */,
 				AA9C7E1025AAFC9D005A04AE /* feature-about */,
 				AA99AAFD257FC4E60050C92D /* feature-app-service */,
 				AA984C0E257E358E0008E31D /* feature-main */,
@@ -348,6 +376,7 @@
 			children = (
 				AA99AAFE257FC50C0050C92D /* MuslimPrayerTimes.swift */,
 				AAA2573D25B16555004B4B50 /* PrayerManager.swift */,
+				AA504AED25B9D5E200CFAD60 /* QuranManager.swift */,
 			);
 			path = "feature-app-service";
 			sourceTree = "<group>";
@@ -435,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6B577325B54AE9006A589A /* QuranView.xib in Resources */,
 				AA227C092581CFED00B205E5 /* MainQiblaCell.xib in Resources */,
 				AA9C7E1C25AB0E3B005A04AE /* AboutView.xib in Resources */,
 				AAA2575525B1C648004B4B50 /* adhan_fajr_1.wav in Resources */,
@@ -519,6 +549,7 @@
 				AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */,
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
+				AA6B577025B54AE9006A589A /* QuranProtocols.swift in Sources */,
 				AA9C7E1725AB0E3B005A04AE /* AboutPresenter.swift in Sources */,
 				AA9C7E1825AB0E3B005A04AE /* AboutRouter.swift in Sources */,
 				AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */,
@@ -528,6 +559,7 @@
 				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
 				AA9C7E1925AB0E3B005A04AE /* AboutProtocols.swift in Sources */,
 				AA686CA1258078F400040110 /* Constant.swift in Sources */,
+				AA6B576F25B54AE9006A589A /* QuranRouter.swift in Sources */,
 				AA227C18258271FA00B205E5 /* LocalNotificationX.swift in Sources */,
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
 				AAA2575925B1D55D004B4B50 /* UIViewController+Ext.swift in Sources */,
@@ -540,18 +572,22 @@
 				AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */,
 				AA03437A2585B460007DE320 /* CompositeAppDelegate.swift in Sources */,
 				AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */,
+				AA504AEE25B9D5E200CFAD60 /* QuranManager.swift in Sources */,
+				AA6B577125B54AE9006A589A /* QuranInteractor.swift in Sources */,
 				AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
 				AA9C7E1B25AB0E3B005A04AE /* AboutView.swift in Sources */,
 				AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */,
+				AA6B576E25B54AE9006A589A /* QuranPresenter.swift in Sources */,
 				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
 				AA9C7E1A25AB0E3B005A04AE /* AboutInteractor.swift in Sources */,
 				AAA2573E25B16555004B4B50 /* PrayerManager.swift in Sources */,
 				AA984C6B257E6A610008E31D /* String+Ext.swift in Sources */,
 				AA984C15257E35A90008E31D /* MainPresenter.swift in Sources */,
+				AA6B577225B54AE9006A589A /* QuranView.swift in Sources */,
 				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,
 				AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */,
 				AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */,

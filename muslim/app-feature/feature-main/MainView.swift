@@ -29,7 +29,10 @@ class MainView: UIViewController, MainPresenterToView {
     }
     
     func setupViews() {
-        SPPermission.Dialog.requestIfNeeded(with: [.locationAlwaysAndWhenInUse], on: self, delegate: self, dataSource: self)
+        let permission = SPPermissions.dialog([.locationAlwaysAndWhenInUse])
+        permission.delegate = self
+        permission.dataSource = self
+        permission.present(on: self)
         
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.isTranslucent = true
@@ -115,15 +118,27 @@ extension MainView: MainTimeTableCellDelegate {
     }
 }
 
-extension MainView: SPPermissionDialogDelegate {}
+extension MainView: SPPermissionsDelegate { }
 
-extension MainView: SPPermissionDialogDataSource {
-    func description(for permission: SPPermissionType) -> String? {
+extension MainView: SPPermissionsDataSource {
+    func configure(_ cell: SPPermissionTableViewCell, for permission: SPPermission) -> SPPermissionTableViewCell {
+        
         switch permission {
-        case .locationWhenInUse : return infoPlist(key: .NSLocationUsageDescription)
-        case .locationAlwaysAndWhenInUse : return infoPlist(key: .NSLocationAlwaysAndWhenInUseUsageDescription)
-        default: return "Need Allow for use this Application"
+        
+        case .locationWhenInUse :
+            let description = infoPlist(key: .NSLocationUsageDescription)
+            cell.permissionDescriptionLabel.text = description
+            
+        case .locationAlwaysAndWhenInUse :
+            let description = infoPlist(key: .NSLocationAlwaysAndWhenInUseUsageDescription)
+            cell.permissionDescriptionLabel.text = description
+            
+        default:
+            let description = "Need Allow for use this Application"
+            cell.permissionDescriptionLabel.text = description
         }
+        
+        return cell
     }
 }
 

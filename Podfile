@@ -9,7 +9,6 @@ target 'muslim' do
   pod 'Adhan'
   pod 'PrayerIDN'
   pod 'Siren'
-  pod 'SkeletonView'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'SPPermissions'

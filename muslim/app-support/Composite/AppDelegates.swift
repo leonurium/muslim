@@ -39,7 +39,7 @@ class StartupAppDelegate: AppDelegateType {
     }
     
     private func getInitial() -> UIViewController {
-        return MainRouter.createMainModule()
+        return QuranRouter.createQuranModule()
     }
 }
 
