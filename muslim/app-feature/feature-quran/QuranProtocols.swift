@@ -31,7 +31,7 @@ protocol QuranPresenterToInteractor: class {
 // MARK: Router -
 protocol QuranPresenterToRouter: class {
     static func createQuranModule() -> UIViewController
-    func navigateToVerse(chapter_id: Int, verse_ids: [Int], from: QuranPresenterToView?)
+    func navigateToVerse(chapter_id: Int, verse_count: Int, from: QuranPresenterToView?)
 }
 
 // MARK: Presenter -

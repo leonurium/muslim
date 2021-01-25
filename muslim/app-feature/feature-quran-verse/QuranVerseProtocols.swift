@@ -30,7 +30,7 @@ protocol QuranVersePresenterToInteractor: class {
 
 // MARK: Router -
 protocol QuranVersePresenterToRouter: class {
-    static func createQuranVerseModule(chapter_id: Int, verse_ids: [Int]) -> UIViewController
+    static func createQuranVerseModule(chapter_id: Int, verse_count: Int) -> UIViewController
 }
 
 // MARK: Presenter -
@@ -43,6 +43,7 @@ protocol QuranVerseViewToPresenter: class {
     func didLoad()
     func numberOfRowsInSection() -> Int
     func cellForRowAt(indexPath: IndexPath) -> QuranManager.QuranVerse
+    func requestVerse()
 }
 
 protocol QuranVerseInteractorToPresenter: class {

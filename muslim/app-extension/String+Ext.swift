@@ -25,4 +25,29 @@ extension String {
             alpha: CGFloat(alpha)
         )
     }
+    
+    func addEndOfAyah(number: Int?) -> String {
+        var endOfAyah = ""
+        if let num = number,
+           let numStr = getArabicDigitFor(value: num) {
+            endOfAyah.append(" ")
+            endOfAyah.append(CCQuran.end_of_ayah_1st.rawValue)
+            endOfAyah.append(numStr)
+            endOfAyah.append(CCQuran.end_of_ayah_2nd.rawValue)
+            endOfAyah.append(" ")
+            return self + endOfAyah
+        
+        } else {
+            endOfAyah.append(CCQuran.end_of_ayah.rawValue)
+            return self + endOfAyah
+        }
+    }
+    
+    func getArabicDigitFor(value:Int) -> String? {
+        let numberToConvert = NSNumber(value: value)
+        let formatter = NumberFormatter()
+        let arLocale = Locale(identifier: "ar")
+        formatter.locale = arLocale
+        return formatter.string(from: numberToConvert)
+    }
 }

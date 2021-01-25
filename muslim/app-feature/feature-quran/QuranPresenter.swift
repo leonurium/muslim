@@ -30,8 +30,7 @@ class QuranPresenter: QuranViewToPresenter {
     
     func navigateToVerse(indexPath: IndexPath) {
         let chapter = quranChapters[indexPath.row]
-        let verse_ids = Array(1...chapter.verses_count)
-        router?.navigateToVerse(chapter_id: chapter.id, verse_ids: verse_ids, from: view)
+        router?.navigateToVerse(chapter_id: chapter.id, verse_count: chapter.verses_count, from: view)
     }
     
     private func inputChapters(chap: QuranManager.QuranChapter) {

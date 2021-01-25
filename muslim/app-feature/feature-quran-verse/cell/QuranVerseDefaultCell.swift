@@ -50,7 +50,7 @@ class QuranVerseDefaultCell: UITableViewCell {
     }
     
     private func updateUI() {
-        lbl_title.text = verse?.verse
+        lbl_title.text = verse?.verse.addEndOfAyah(number: verse?.id)
         lbl_body.text = verse?.verse_locale.indonesia
     }
 }

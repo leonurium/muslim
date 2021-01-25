@@ -76,4 +76,13 @@ extension QuranVerseView: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        if offsetY > contentHeight - scrollView.frame.height {
+            presenter?.requestVerse()
+        }
+    }
 }

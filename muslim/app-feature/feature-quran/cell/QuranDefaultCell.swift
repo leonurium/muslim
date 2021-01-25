@@ -58,7 +58,7 @@ class QuranDefaultCell: UITableViewCell {
     }
     
     private func updateUI() {
-        lbl_id.text = String(describing: chapter?.id ?? 0)
+        lbl_id.text = "".addEndOfAyah(number: chapter?.id)
         lbl_title.text = chapter?.name
         lbl_body.text =
             (chapter?.place ?? "") +
