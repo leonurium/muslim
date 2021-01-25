@@ -9,9 +9,9 @@ import UIKit
 
 class QuranVerseRouter: QuranVersePresenterToRouter {
     
-    static func createQuranVerseModule() -> UIViewController {
+    static func createQuranVerseModule(chapter_id: Int, verse_ids: [Int]) -> UIViewController {
         let view: UIViewController & QuranVersePresenterToView = QuranVerseView()
-        let presenter: QuranVerseViewToPresenter & QuranVerseInteractorToPresenter = QuranVersePresenter()
+        let presenter: QuranVerseViewToPresenter & QuranVerseInteractorToPresenter = QuranVersePresenter(chapter_id: chapter_id, verse_ids: verse_ids)
         let interactor: QuranVersePresenterToInteractor = QuranVerseInteractor()
         let router: QuranVersePresenterToRouter = QuranVerseRouter()
         

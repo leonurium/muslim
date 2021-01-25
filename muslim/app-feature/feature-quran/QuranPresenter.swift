@@ -28,6 +28,12 @@ class QuranPresenter: QuranViewToPresenter {
         quranChapters[indexPath.row]
     }
     
+    func navigateToVerse(indexPath: IndexPath) {
+        let chapter = quranChapters[indexPath.row]
+        let verse_ids = Array(1...chapter.verses_count)
+        router?.navigateToVerse(chapter_id: chapter.id, verse_ids: verse_ids, from: view)
+    }
+    
     private func inputChapters(chap: QuranManager.QuranChapter) {
         if quranChapters.contains(chap),
            let index = quranChapters.firstIndex(of: chap) {

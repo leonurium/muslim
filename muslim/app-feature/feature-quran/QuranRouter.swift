@@ -23,4 +23,11 @@ class QuranRouter: QuranPresenterToRouter {
         
         return view
     }
+    
+    func navigateToVerse(chapter_id: Int, verse_ids: [Int], from: QuranPresenterToView?) {
+        if let vc = from as? UIViewController {
+            let verseController = QuranVerseRouter.createQuranVerseModule(chapter_id: chapter_id, verse_ids: verse_ids)
+            vc.navigationController?.pushViewController(verseController, animated: true)
+        }
+    }
 }

@@ -25,13 +25,13 @@ protocol QuranPresenterToInteractor: class {
     var presenter: QuranInteractorToPresenter?  { get set }
     
     func getChapter(chapter_id: Int?)
-    func getVerse(chapter_id: Int, verse_ids: [Int])
 }
 
 
 // MARK: Router -
 protocol QuranPresenterToRouter: class {
     static func createQuranModule() -> UIViewController
+    func navigateToVerse(chapter_id: Int, verse_ids: [Int], from: QuranPresenterToView?)
 }
 
 // MARK: Presenter -
@@ -43,6 +43,7 @@ protocol QuranViewToPresenter: class {
     func didLoad()
     func numberOfRowsInSection() -> Int
     func cellForRowAt(indexPath: IndexPath) -> QuranManager.QuranChapter
+    func navigateToVerse(indexPath: IndexPath)
 }
 
 protocol QuranInteractorToPresenter: class {

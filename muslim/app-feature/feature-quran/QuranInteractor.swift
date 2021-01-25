@@ -19,10 +19,6 @@ class QuranInteractor: QuranPresenterToInteractor {
     func getChapter(chapter_id: Int?) {
         quran.getChapter(chapter_id: chapter_id)
     }
-    
-    func getVerse(chapter_id: Int, verse_ids: [Int]) {
-        quran.getVerse(chapter_id: chapter_id, verse_ids: verse_ids)
-    }
 }
 
 extension QuranInteractor: QuranManagerDelegate {
