@@ -3,5 +3,6 @@ Muslimify is open source, aims to make Muslim life better. We really value the s
 
 ### To Do
 - [ ] Banyak
+- [ ] Sangat Banyak
 
 open [issues](https://github.com/ranggaleoo/muslim/issues/new) and [PR](https://github.com/ranggaleoo/muslim/pulls) is very welcome, cheers :)
