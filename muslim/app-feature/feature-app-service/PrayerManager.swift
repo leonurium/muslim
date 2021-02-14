@@ -34,6 +34,7 @@ class PrayerManager: NSObject {
     private var timer : Timer?
     private var isAllowRequest: Bool = true
     private var lastPrayerToday: Date?
+    private var currentPlace: String?
     
     override init() {
         super.init()
@@ -61,6 +62,7 @@ class PrayerManager: NSObject {
         }
         
         getPlace(for: location) { (placemark) in
+            self.currentPlace = placemark?.locality
             guard
                 let country = placemark?.country?.lowercased(),
                 country == Countries.indonesia.rawValue
@@ -71,7 +73,7 @@ class PrayerManager: NSObject {
                 params.madhab = .hanafi
                 
                 if let prayers = PrayerTimes(coordinates: coordinates, date: date, calculationParameters: params) {
-                    let times = MuslimPrayerTimes(fajr: prayers.fajr, sunrise: prayers.sunrise, dhuhr: prayers.dhuhr, asr: prayers.asr, maghrib: prayers.maghrib, isha: prayers.isha)
+                    let times = MuslimPrayerTimes(place: self.currentPlace, fajr: prayers.fajr, sunrise: prayers.sunrise, dhuhr: prayers.dhuhr, asr: prayers.asr, maghrib: prayers.maghrib, isha: prayers.isha)
                     if now >= times.isha, self.lastPrayerToday == nil {
                         self.lastPrayerToday = times.isha
                         self.getPrayerTimes(location: location)
@@ -143,7 +145,7 @@ extension PrayerManager: PrayerDelegate {
     }
     
     func didUpdateTimes(times: PrayerIDN.Times) {
-        let muslimTimes = MuslimPrayerTimes(fajr: times.fajr, sunrise: times.sunrise, dhuhr: times.dhuhr, asr: times.asr, maghrib: times.maghrib, isha: times.isha)
+        let muslimTimes = MuslimPrayerTimes(place: self.currentPlace, fajr: times.fajr, sunrise: times.sunrise, dhuhr: times.dhuhr, asr: times.asr, maghrib: times.maghrib, isha: times.isha)
         
         let now = Date()
         if now >= muslimTimes.isha, lastPrayerToday == nil {

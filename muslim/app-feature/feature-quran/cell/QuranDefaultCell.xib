@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhB-St-PIj" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="157"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="oXG-EY-Nhm"/>
+                                    <constraint firstAttribute="width" constant="70" id="oXG-EY-Nhm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

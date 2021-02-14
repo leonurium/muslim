@@ -12,6 +12,7 @@ struct MainClock {
     let current: String
     let remaining: String
     let date: String
+    let placeName: String
 }
 
 class MainClockCell: UITableViewCell {
@@ -19,8 +20,7 @@ class MainClockCell: UITableViewCell {
     @IBOutlet weak var container_view: UIStackView!
     @IBOutlet weak var lbl_time: UIMLabelTitle!
     @IBOutlet weak var lbl_remaining_time: UIMLabelBody!
-    @IBOutlet weak var lbl_date: UIMLabelNote!
-//    @IBOutlet weak var lbl_pray: UILabel!
+    @IBOutlet weak var lbl_desc: UIMLabelTitle!
     
     struct source {
         static var nib: UINib = UINib(nibName: String(describing: MainClockCell.self), bundle: Bundle(for: MainClockCell.self))
@@ -56,38 +56,45 @@ class MainClockCell: UITableViewCell {
         
         lbl_time.setFontSize(50)
         lbl_remaining_time.setFontSize(14)
-        lbl_date.setFontSize(14)
+        lbl_desc.setFontSize(14)
         
-        lbl_time.textColor = UIMColor.white.get()
-        lbl_remaining_time.textColor = UIMColor.white.get()
-        lbl_date.textColor = UIMColor.white.get()
-        
-        lbl_time.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
-        lbl_time.layer.shadowOffset = CGSize(width: 0, height: 0)
-        lbl_time.layer.shadowRadius = 10.0
-        lbl_time.layer.shadowOpacity = 30.0
+        lbl_time.textColor = UIMColor.mine_shaft.get()
+        lbl_remaining_time.textColor = UIMColor.mine_shaft.get()
+        lbl_desc.textColor = UIMColor.mine_shaft.get()
+
         lbl_time.layer.masksToBounds = false
-        
-        lbl_remaining_time.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
-        lbl_remaining_time.layer.shadowOffset = CGSize(width: 0, height: 0)
-        lbl_remaining_time.layer.shadowRadius = 10.0
-        lbl_remaining_time.layer.shadowOpacity = 30.0
         lbl_remaining_time.layer.masksToBounds = false
-        
-        lbl_date.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
-        lbl_date.layer.shadowOffset = CGSize(width: 0, height: 0)
-        lbl_date.layer.shadowRadius = 10.0
-        lbl_date.layer.shadowOpacity = 30.0
-        lbl_date.layer.masksToBounds = false
+        lbl_desc.layer.masksToBounds = false
     }
     
     private func updateUI() {
         lbl_time.text = data?.current
         lbl_remaining_time.text = "\(data?.prayerName ?? "") (\(data?.remaining ?? ""))"
-        lbl_date.text = data?.date
+
+        var place: String = ""
+        place.append(CharacterConstant.pin_location.rawValue)
+        place.append(" ")
+        place.append(data?.placeName ?? "")
+        lbl_desc.text = place.uppercased()
     }
     
     func updateIntervalView(newInterval: String) {
         lbl_remaining_time.text = "\(data?.prayerName ?? "") (\(newInterval))"
+    }
+}
+
+class MaskableCellView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutIfNeeded()
+        let hole = CGRect(x: self.frame.minX + 16, y: self.frame.minY + 16, width: self.frame.width - 64, height: self.frame.height - 48)
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = hole
+        let roundedRectPath = UIBezierPath(roundedRect: hole, cornerRadius: 10)
+        let path = UIBezierPath(rect: bounds)
+        path.append(roundedRectPath)
+        maskLayer.fillRule = .evenOdd
+        maskLayer.path = path.cgPath        
+        layer.mask = maskLayer
     }
 }

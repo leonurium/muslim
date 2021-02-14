@@ -29,10 +29,6 @@ class MainPresenter: MainViewToPresenter {
     }
     
     func cellForRowClock() -> MainClock? {
-        debugLog(PrayerManager.shared.requestDate)
-        debugLog(times)
-        debugLog(times?.currentPrayer(at: PrayerManager.shared.requestDate))
-        debugLog(times?.nextPrayer(at: PrayerManager.shared.requestDate))
         if
             let prayerTimes = times,
             let currentPrayer = prayerTimes.currentPrayer(at: PrayerManager.shared.requestDate),
@@ -46,13 +42,16 @@ class MainPresenter: MainViewToPresenter {
             
             let timeFormatter = DateFormatter()
             let dateFormatter = DateFormatter()
+            let titleFormatter = DateFormatter()
             timeFormatter.timeStyle = .short
             dateFormatter.dateStyle = .full
+            titleFormatter.dateStyle = .medium
             
             var shouldDisplayCurrentPrayer: String = ""
             var shouldDisplayCurrentPrayerTime: String = ""
             var shouldDisplayDate: String = ""
             var shouldDisplayCountdown: String = ""
+            var shouldDidplayTitle: String = ""
             
             if (now.timeIntervalSince(currentPrayerTime) / 60) >= TimeIntervalConstant.limit_value_between_prayer.rawValue {
                 isPlus = false
@@ -62,6 +61,7 @@ class MainPresenter: MainViewToPresenter {
                 shouldDisplayCurrentPrayerTime = timeFormatter.string(from: nextPrayerTime)
                 shouldDisplayDate = dateFormatter.string(from: nextPrayerTime)
                 shouldDisplayCountdown = String(format: StringConstant.format_remainig_time_minus.rawValue, hour, minute, second)
+                shouldDidplayTitle = titleFormatter.string(from: nextPrayerTime)
                 
             } else {
                 isPlus = true
@@ -71,12 +71,14 @@ class MainPresenter: MainViewToPresenter {
                 shouldDisplayCurrentPrayerTime = timeFormatter.string(from: currentPrayerTime)
                 shouldDisplayDate = dateFormatter.string(from: currentPrayerTime)
                 shouldDisplayCountdown = String(format: StringConstant.format_remainig_time_plus.rawValue, hour, minute, second)
+                shouldDidplayTitle = titleFormatter.string(from: currentPrayerTime)
             }
             
             if timer == nil {
                 timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(didChangeTimeInterval), userInfo: nil, repeats: true)
             }
-            let clock = MainClock(prayerName: shouldDisplayCurrentPrayer, current: shouldDisplayCurrentPrayerTime, remaining: shouldDisplayCountdown, date: shouldDisplayDate)
+            view?.updateTitle(title: shouldDidplayTitle)
+            let clock = MainClock(prayerName: shouldDisplayCurrentPrayer, current: shouldDisplayCurrentPrayerTime, remaining: shouldDisplayCountdown, date: shouldDisplayDate, placeName: times?.place ?? "")
             currentMainClock = clock
             return clock
         }

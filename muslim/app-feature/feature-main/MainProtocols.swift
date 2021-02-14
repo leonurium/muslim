@@ -16,6 +16,7 @@ protocol MainPresenterToView: class {
     func reloadTableView()
     func updateIntevalView(remaining: String)
     func updateQiblaView(angle: Double)
+    func updateTitle(title: String)
     func didTapInfo()
     func showLoaderIndicator()
     func dismissLoaderIndicator()

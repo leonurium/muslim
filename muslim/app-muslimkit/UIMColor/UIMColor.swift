@@ -15,12 +15,18 @@ enum UIMColor: String {
     case white = "FFFFFF" // white
     case alto = "D6D6D6" // gray light
     case buttercup = "F0BE0C" // orange
+    case zumthor = "E8F1FF" // blue light
+    case science_blue = "0960E1" // blue
         
     func get() -> UIColor {
         return self.rawValue.hexToUIColor()
     }
     
     static func brandColor() -> UIColor {
-        return UIMColor.mine_shaft.get()
+        return UIMColor.science_blue.get()
+    }
+    
+    static func secondBrandColor() -> UIColor {
+        return UIMColor.zumthor.get()
     }
 }

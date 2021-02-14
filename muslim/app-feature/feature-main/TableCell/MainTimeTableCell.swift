@@ -49,11 +49,11 @@ class MainTimeTableCell: UITableViewCell {
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         
-        container_round.layer.cornerRadius = 15
-        container_round.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
-        container_round.layer.shadowOffset = CGSize(width: 0, height: 0)
-        container_round.layer.shadowRadius = 10.0
-        container_round.layer.shadowOpacity = 30.0
+//        container_round.layer.cornerRadius = 15
+//        container_round.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
+//        container_round.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        container_round.layer.shadowRadius = 10.0
+//        container_round.layer.shadowOpacity = 30.0
         container_round.layer.masksToBounds = false
         container_round.backgroundColor = UIMColor.mine_shaft.get().withAlphaComponent(0.3)
         container_round.backgroundColor = .clear
@@ -75,14 +75,14 @@ class MainTimeTableCell: UITableViewCell {
             
             let lbl_prayer = UIMLabelBody()
             lbl_prayer.text = String(describing: prayer.prayer).capitalized
-            lbl_prayer.textColor = UIMColor.white.get()
+            lbl_prayer.textColor = UIMColor.mine_shaft.get()
             lbl_prayer.setFontSize(18)
             lbl_prayer.textAlignment = .left
             lbl_prayer.tag = index
             lbl_prayer.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(itemClicked(_:))))
             
             let lbl_time = UIMLabelBody()
-            lbl_time.textColor = UIMColor.white.get()
+            lbl_time.textColor = UIMColor.mine_shaft.get()
             lbl_time.setFontSize(18)
             lbl_time.textAlignment = .right
             lbl_time.tag = index
@@ -100,7 +100,7 @@ class MainTimeTableCell: UITableViewCell {
             if prayer.prayer == main.currentPrayer {
                 lbl_prayer.makeBold()
                 lbl_time.makeBold()
-                stack.backgroundColor = UIMColor.white.get().withAlphaComponent(0.4)
+                stack.backgroundColor = UIMColor.mine_shaft.get().withAlphaComponent(0.4)
                 stack.layer.cornerRadius = 10
             }
             

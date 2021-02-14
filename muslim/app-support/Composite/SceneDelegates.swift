@@ -37,7 +37,8 @@ class StartupSceneDelegate: SceneDelegateType {
     }
     
     private func getInitial() -> UIViewController {
-        return QuranRouter.createQuranModule()
+//        return QuranRouter.createQuranModule()
+        return MainRouter.createMainModule()
     }
 }
 

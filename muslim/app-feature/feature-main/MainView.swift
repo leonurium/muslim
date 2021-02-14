@@ -41,8 +41,14 @@ class MainView: UIViewController, MainPresenterToView {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.tintColor  = UIMColor.white.get()
         
-        let btn_info = UIBarButtonItem(image: UIImage(identifierName: .btn_info), style: .plain, target: self, action: #selector(didTapInfo))
-        navigationItem.rightBarButtonItems = [btn_info]
+        let btn_info = UIMButtonIcon()
+        let btn_info_image = UIImage(identifierName: .btn_info)?.withRenderingMode(.alwaysTemplate)
+        btn_info.setIcon(image: btn_info_image)
+        btn_info.setInset()
+        btn_info.addTarget(self, action: #selector(didTapInfo), for: .touchUpInside)
+        let btn_bar_info = UIBarButtonItem()
+        btn_bar_info.customView = btn_info
+        navigationItem.rightBarButtonItems = [btn_bar_info]
         
         tableview.dataSource = self
         tableview.delegate = self
@@ -52,13 +58,15 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.register(MainQiblaCell.source.nib, forCellReuseIdentifier: MainQiblaCell.source.identifier)
         
         let imageView = UIImageView()
-        imageView.image = UIImage(identifierName: .image_background_2)
+//        imageView.image = UIImage(identifierName: .image_background_2)
         tableview.backgroundView = imageView
     }
     
     func reloadTableView() {
         if let table = tableview {
-            table.reloadData()
+            DispatchQueue.main.async {
+                table.reloadData()
+            }
         }
     }
     
@@ -72,6 +80,10 @@ class MainView: UIViewController, MainPresenterToView {
         if let cell = tableview.cellForRow(at: IndexPath(row: 2, section: 0)) as? MainQiblaCell {
             cell.updateQibla(angle: angle)
         }
+    }
+    
+    func updateTitle(title: String) {
+        self.title = title
     }
     
     @objc

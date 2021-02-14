@@ -9,6 +9,7 @@ import Foundation
 
 
 struct MuslimPrayerTimes {
+    let place: String?
     let fajr: Date
     let sunrise: Date
     let dhuhr: Date

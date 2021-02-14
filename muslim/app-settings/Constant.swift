@@ -30,7 +30,8 @@ enum IntConstant: Int {
 }
 
 enum CharacterConstant: Character {
-    case example = "\u{FD3E}"
+    case pin_location = "\u{1F4CD}"
+    case bullet = "\u{2022}"
     
     enum Quran: Character {
         case bismillah = "\u{FDFD}"

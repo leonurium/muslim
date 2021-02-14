@@ -51,8 +51,11 @@ class MainQiblaCell: UITableViewCell {
     }
     
     private func updateUI() {
-        image_compass.image = UIImage(named: qibla?.image_compass ?? "")
-        image_qibla_direction.image = UIImage(named: qibla?.image_qibla_direction ?? "")
+        image_compass.image = UIImage(named: qibla?.image_compass ?? "")?.withRenderingMode(.alwaysTemplate)
+        image_qibla_direction.image = UIImage(named: qibla?.image_qibla_direction ?? "")?.withRenderingMode(.alwaysTemplate)
+        
+        image_compass.tintColor = UIMColor.mine_shaft.get()
+        image_qibla_direction.tintColor = UIMColor.mine_shaft.get()
     }
     
     func updateQibla(angle: Double) {

@@ -31,7 +31,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-ZQ-Kb4" customClass="UIMLabelNote" customModule="muslim" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5m-ZQ-Kb4" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="134.5" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -51,11 +51,11 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="container_view" destination="5A2-Vw-DjF" id="zkB-8k-aGr"/>
-                <outlet property="lbl_date" destination="d5m-ZQ-Kb4" id="d4r-Dj-UZU"/>
+                <outlet property="lbl_desc" destination="d5m-ZQ-Kb4" id="FWc-aj-p71"/>
                 <outlet property="lbl_remaining_time" destination="L8T-cn-ud4" id="t7G-AR-UcE"/>
                 <outlet property="lbl_time" destination="z86-1K-VBa" id="BYM-xL-dVP"/>
             </connections>
-            <point key="canvasLocation" x="-226" y="58"/>
+            <point key="canvasLocation" x="-226.08695652173915" y="57.924107142857139"/>
         </tableViewCell>
     </objects>
 </document>

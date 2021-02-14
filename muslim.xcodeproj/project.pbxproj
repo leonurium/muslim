@@ -75,6 +75,12 @@
 		AAA2575525B1C648004B4B50 /* adhan_fajr_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AAA2575325B1C648004B4B50 /* adhan_fajr_1.wav */; };
 		AAA2575625B1C648004B4B50 /* adhan_mecca_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = AAA2575425B1C648004B4B50 /* adhan_mecca_1.wav */; };
 		AAA2575925B1D55D004B4B50 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA2575825B1D55D004B4B50 /* UIViewController+Ext.swift */; };
+		AAAE76CC25D6C671006B6F52 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE76CB25D6C671006B6F52 /* UIView+Ext.swift */; };
+		AAAE771E25D97C6E006B6F52 /* UIMButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE771D25D97C6E006B6F52 /* UIMButtonIcon.swift */; };
+		AAAE772125D9820B006B6F52 /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE772025D9820B006B6F52 /* MainMenuCell.swift */; };
+		AAAE772425D9821E006B6F52 /* MainMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAE772325D9821E006B6F52 /* MainMenuCell.xib */; };
+		AAAE772825D98444006B6F52 /* MainMenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAAE772725D98444006B6F52 /* MainMenuItemCell.xib */; };
+		AAAE772B25D9844E006B6F52 /* MainMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAE772A25D9844E006B6F52 /* MainMenuItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +154,12 @@
 		AAA2575325B1C648004B4B50 /* adhan_fajr_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = adhan_fajr_1.wav; sourceTree = "<group>"; };
 		AAA2575425B1C648004B4B50 /* adhan_mecca_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = adhan_mecca_1.wav; sourceTree = "<group>"; };
 		AAA2575825B1D55D004B4B50 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		AAAE76CB25D6C671006B6F52 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		AAAE771D25D97C6E006B6F52 /* UIMButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMButtonIcon.swift; sourceTree = "<group>"; };
+		AAAE772025D9820B006B6F52 /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
+		AAAE772325D9821E006B6F52 /* MainMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuCell.xib; sourceTree = "<group>"; };
+		AAAE772725D98444006B6F52 /* MainMenuItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuItemCell.xib; sourceTree = "<group>"; };
+		AAAE772A25D9844E006B6F52 /* MainMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuItemCell.swift; sourceTree = "<group>"; };
 		DFA87B65178B0D54D6B617EA /* Pods-muslim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.debug.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D781C48D2CD6162E6F581 /* Pods-muslim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-muslim.release.xcconfig"; path = "Target Support Files/Pods-muslim/Pods-muslim.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -342,7 +354,8 @@
 		AA984C0E257E358E0008E31D /* feature-main */ = {
 			isa = PBXGroup;
 			children = (
-				AA984C50257E64AA0008E31D /* cell */,
+				AAAE772625D98422006B6F52 /* CollectionCell */,
+				AA984C50257E64AA0008E31D /* TableCell */,
 				AA984C0F257E35A90008E31D /* MainPresenter.swift */,
 				AA984C10257E35A90008E31D /* MainRouter.swift */,
 				AA984C11257E35A90008E31D /* MainProtocols.swift */,
@@ -372,11 +385,12 @@
 				AA984C70257E700E0008E31D /* UIColor+Ext.swift */,
 				AA686C9C258075CB00040110 /* Int+Ext.swift */,
 				AAA2575825B1D55D004B4B50 /* UIViewController+Ext.swift */,
+				AAAE76CB25D6C671006B6F52 /* UIView+Ext.swift */,
 			);
 			path = "app-extension";
 			sourceTree = "<group>";
 		};
-		AA984C50257E64AA0008E31D /* cell */ = {
+		AA984C50257E64AA0008E31D /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
 				AA984C51257E64EA0008E31D /* MainClockCell.xib */,
@@ -385,13 +399,16 @@
 				AA686CA92580980F00040110 /* MainTimeTableCell.swift */,
 				AA227C082581CFED00B205E5 /* MainQiblaCell.xib */,
 				AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */,
+				AAAE772025D9820B006B6F52 /* MainMenuCell.swift */,
+				AAAE772325D9821E006B6F52 /* MainMenuCell.xib */,
 			);
-			path = cell;
+			path = TableCell;
 			sourceTree = "<group>";
 		};
 		AA984C57257E66DD0008E31D /* app-muslimkit */ = {
 			isa = PBXGroup;
 			children = (
+				AAAE771C25D97C4E006B6F52 /* UIMButton */,
 				AA984C65257E69260008E31D /* UIMColor */,
 				AA984C5A257E672C0008E31D /* UIMFont */,
 				AA984C58257E66E80008E31D /* UIMLabel */,
@@ -456,6 +473,23 @@
 				AA9C7E1625AB0E3B005A04AE /* AboutView.xib */,
 			);
 			path = "feature-about";
+			sourceTree = "<group>";
+		};
+		AAAE771C25D97C4E006B6F52 /* UIMButton */ = {
+			isa = PBXGroup;
+			children = (
+				AAAE771D25D97C6E006B6F52 /* UIMButtonIcon.swift */,
+			);
+			path = UIMButton;
+			sourceTree = "<group>";
+		};
+		AAAE772625D98422006B6F52 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				AAAE772725D98444006B6F52 /* MainMenuItemCell.xib */,
+				AAAE772A25D9844E006B6F52 /* MainMenuItemCell.swift */,
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +563,8 @@
 				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
 				AA16EDF325BDCB0E007F77C9 /* QuranVerseView.xib in Resources */,
 				AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */,
+				AAAE772425D9821E006B6F52 /* MainMenuCell.xib in Resources */,
+				AAAE772825D98444006B6F52 /* MainMenuItemCell.xib in Resources */,
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
 				AAA2575625B1C648004B4B50 /* adhan_mecca_1.wav in Resources */,
@@ -607,11 +643,13 @@
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA16EDF125BDCB0E007F77C9 /* QuranVerseInteractor.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
+				AAAE76CC25D6C671006B6F52 /* UIView+Ext.swift in Sources */,
 				AA6B577025B54AE9006A589A /* QuranProtocols.swift in Sources */,
 				AA9C7E1725AB0E3B005A04AE /* AboutPresenter.swift in Sources */,
 				AA9C7E1825AB0E3B005A04AE /* AboutRouter.swift in Sources */,
 				AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */,
 				AA99AB09257FC9750050C92D /* Localizable.swift in Sources */,
+				AAAE771E25D97C6E006B6F52 /* UIMButtonIcon.swift in Sources */,
 				AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */,
 				AA16EDF225BDCB0E007F77C9 /* QuranVerseView.swift in Sources */,
 				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
@@ -635,6 +673,8 @@
 				AA0503B9257F8CD9007A1CD4 /* Parser.swift in Sources */,
 				AA504AEE25B9D5E200CFAD60 /* QuranManager.swift in Sources */,
 				AA6B577125B54AE9006A589A /* QuranInteractor.swift in Sources */,
+				AAAE772B25D9844E006B6F52 /* MainMenuItemCell.swift in Sources */,
+				AAAE772125D9820B006B6F52 /* MainMenuCell.swift in Sources */,
 				AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,

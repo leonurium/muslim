@@ -51,7 +51,7 @@ class QuranDefaultCell: UITableViewCell {
         lbl_arabic.textColor = UIMColor.white.get()
         lbl_arabic.textAlignment = .right
         
-        lbl_id.setFontSize(20)
+        lbl_id.setFontSize(18)
         lbl_title.setFontSize(18)
         lbl_body.setFontSize(16)
         lbl_arabic.setFontSize(24)
