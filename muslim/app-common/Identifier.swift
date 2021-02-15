@@ -25,6 +25,12 @@ enum Identifier {
         
         // MARK: - Assets Button
         case btn_info
+        
+        // MARK: - Assets Icon
+        case icon_qibla
+        case icon_quran
+        case icon_share
+        case icon_time
     }
     
     public enum soundName: String {

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MainMenuCellDelegate: class {
+    func didTapMenu(item: MainMenuItem)
+}
+
 class MainMenuCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -20,6 +24,8 @@ class MainMenuCell: UITableViewCell {
             updateUI()
         }
     }
+    
+    weak var delegate: MainMenuCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,6 +56,7 @@ extension MainMenuCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainMenuItemCell.source.identifier, for: indexPath) as? MainMenuItemCell {
             cell.item = menus[indexPath.row]
+            cell.delegate = self
             return cell
         }
         return UICollectionViewCell()
@@ -71,5 +78,11 @@ extension MainMenuCell: UICollectionViewDelegateFlowLayout {
         let rightInset = leftInset
 
         return UIEdgeInsets(top: 2, left: leftInset, bottom: 2, right: rightInset)
+    }
+}
+
+extension MainMenuCell: MainMenuItemCellDelegate {
+    func didTapMenu(item: MainMenuItem) {
+        delegate?.didTapMenu(item: item)
     }
 }

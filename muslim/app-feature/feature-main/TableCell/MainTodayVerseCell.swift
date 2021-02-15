@@ -14,6 +14,10 @@ struct MainTodayVerse {
     let subText: String
 }
 
+protocol MainTodayVerseCellDelegate: class {
+    func didTapShare(cell: MainTodayVerseCell)
+}
+
 class MainTodayVerseCell: UITableViewCell {
     @IBOutlet weak var container_view: UIView!
     @IBOutlet weak var container_stack_header: UIStackView!
@@ -34,6 +38,8 @@ class MainTodayVerseCell: UITableViewCell {
             updateUI()
         }
     }
+    
+    weak var delegate: MainTodayVerseCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,7 +62,7 @@ class MainTodayVerseCell: UITableViewCell {
         container_stack_body.spacing = 8
         container_stack_header.spacing = 2
         
-        let image = UIImage(identifierName: .btn_info)?.withRenderingMode(.alwaysTemplate)
+        let image = UIImage(identifierName: .icon_share)?.withRenderingMode(.alwaysTemplate)
         btn_share.setIcon(image: image)
         btn_share.setInset()
         btn_share.setCornerRadius(radius: 5)
@@ -83,6 +89,6 @@ class MainTodayVerseCell: UITableViewCell {
     }
     
     @objc func didTapShare(_ sender: UIMButtonIcon) {
-        
+        delegate?.didTapShare(cell: self)
     }
 }

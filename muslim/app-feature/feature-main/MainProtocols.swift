@@ -34,6 +34,9 @@ protocol MainPresenterToInteractor: class {
 protocol MainPresenterToRouter: class {
     static func createMainModule() -> UIViewController
     func navigateToInfo(from: MainPresenterToView?)
+    func navigateToQuran(from: MainPresenterToView?)
+    func navigateToQibla(from: MainPresenterToView?)
+    func navigateToPraytime(from: MainPresenterToView?)
 }
 
 // MARK: Presenter -
@@ -50,6 +53,9 @@ protocol MainViewToPresenter: class {
     func cellForRowTimeTable() -> MainTimeTable?
     func cellForRowQibla() -> MainQibla?
     func navigateToInfo()
+    func navigateToQuran()
+    func navigateToQibla()
+    func navigateToPraytime()
 }
 
 protocol MainInteractorToPresenter: class {

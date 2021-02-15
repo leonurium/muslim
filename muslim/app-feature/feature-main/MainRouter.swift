@@ -34,4 +34,19 @@ class MainRouter: MainPresenterToRouter {
             vc.present(nav, animated: true, completion: nil)
         }
     }
+    
+    func navigateToQuran(from: MainPresenterToView?) {
+        if let vc = from as? UIViewController {
+            let destination = QuranRouter.createQuranModule()
+            vc.navigationController?.pushViewController(destination, animated: true)
+        }
+    }
+    
+    func navigateToQibla(from: MainPresenterToView?) {
+        
+    }
+    
+    func navigateToPraytime(from: MainPresenterToView?) {
+        
+    }
 }

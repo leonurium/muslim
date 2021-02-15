@@ -54,6 +54,7 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.dataSource = self
         tableview.delegate = self
         tableview.separatorStyle = .none
+        tableview.isScrollEnabled = false
         tableview.register(MainClockCell.source.nib, forCellReuseIdentifier: MainClockCell.source.identifier)
         tableview.register(MainMenuCell.source.nib, forCellReuseIdentifier: MainMenuCell.source.identifier)
         tableview.register(MainTodayVerseCell.source.nib, forCellReuseIdentifier: MainTodayVerseCell.source.identifier)
@@ -112,6 +113,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
             indexPath.row == 1,
             let cell = tableView.dequeueReusableCell(withIdentifier: MainMenuCell.source.identifier) as? MainMenuCell {
             cell.menus = presenter?.cellForRowMainMenu() ?? []
+            cell.delegate = self
             return cell
         }
         
@@ -119,6 +121,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
             indexPath.row == 2,
             let cell = tableView.dequeueReusableCell(withIdentifier: MainTodayVerseCell.source.identifier) as? MainTodayVerseCell {
             cell.data = presenter?.cellForRowTodayVerse()
+            cell.delegate = self
             return cell
         }
         
@@ -144,6 +147,27 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
 extension MainView: MainTimeTableCellDelegate {
     func didTapItem(index: Int, cell: MainTimeTableCell) {
         debugLog(index)
+    }
+}
+
+extension MainView: MainTodayVerseCellDelegate {
+    func didTapShare(cell: MainTodayVerseCell) {
+        var items: [Any] = []
+        items.append(cell.data?.text ?? "")
+        items.append(cell.data?.subText ?? "")
+        let shareVC = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(shareVC, animated: true, completion: nil)
+    }
+}
+
+extension MainView: MainMenuCellDelegate {
+    func didTapMenu(item: MainMenuItem) {
+        debugLog(item)
+        switch item.type {
+        case .quran : presenter?.navigateToQuran()
+        case .qibla : presenter?.navigateToQibla()
+        case .praytime : presenter?.navigateToPraytime()
+        }
     }
 }
 

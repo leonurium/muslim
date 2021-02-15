@@ -88,9 +88,9 @@ class MainPresenter: MainViewToPresenter {
     
     func cellForRowMainMenu() -> [MainMenuItem] {
         var menus: [MainMenuItem] = []
-        menus.append(MainMenuItem(icon: .btn_info, title: "Quran"))
-        menus.append(MainMenuItem(icon: .btn_info, title: "Qibla"))
-        menus.append(MainMenuItem(icon: .btn_info, title: "PrayTime"))
+        menus.append(MainMenuItem(icon: .icon_quran, title: String(describing: MainMenuType.quran.self).capitalized, type: .quran))
+        menus.append(MainMenuItem(icon: .icon_qibla, title: String(describing: MainMenuType.qibla.self).capitalized, type: .qibla))
+        menus.append(MainMenuItem(icon: .icon_time, title: String(describing: MainMenuType.praytime.self).capitalized, type: .praytime))
         return menus
     }
     
@@ -166,6 +166,18 @@ class MainPresenter: MainViewToPresenter {
     
     func navigateToInfo() {
         router?.navigateToInfo(from: view)
+    }
+    
+    func navigateToQuran() {
+        router?.navigateToQuran(from: view)
+    }
+    
+    func navigateToQibla() {
+        debugLog(2)
+    }
+    
+    func navigateToPraytime() {
+        debugLog(3)
     }
     
     @objc func didChangeTimeInterval() {

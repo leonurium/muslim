@@ -10,6 +10,15 @@ import UIKit
 struct MainMenuItem {
     let icon: IImageName
     let title: String
+    let type: MainMenuType
+}
+
+enum MainMenuType: Int {
+    case quran, qibla, praytime
+}
+
+protocol MainMenuItemCellDelegate: class {
+    func didTapMenu(item: MainMenuItem)
 }
 
 class MainMenuItemCell: UICollectionViewCell {
@@ -27,6 +36,8 @@ class MainMenuItemCell: UICollectionViewCell {
             updateUI()
         }
     }
+    
+    weak var delegate: MainMenuItemCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,7 +63,12 @@ class MainMenuItemCell: UICollectionViewCell {
         btnMenu.setIcon(image: image)
         btnMenu.setInset(insets: UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12))
         btnMenu.setCornerRadius(radius: 10)
-        
+        btnMenu.addTarget(self, action: #selector(didTapMenu(_:)), for: .touchUpInside)
         lbl_title.text = item?.title
+    }
+    
+    @objc private func didTapMenu(_ sender: UIMButtonIcon) {
+        guard let menuItem = item else { return }
+        delegate?.didTapMenu(item: menuItem)
     }
 }
