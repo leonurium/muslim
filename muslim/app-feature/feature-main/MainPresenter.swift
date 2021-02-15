@@ -94,6 +94,11 @@ class MainPresenter: MainViewToPresenter {
         return menus
     }
     
+    func cellForRowTodayVerse() -> MainTodayVerse? {
+        var todayVerse: MainTodayVerse = MainTodayVerse(title: "Today Verse", subTitle: "Al-Baqarah (12:118)", text: "للمصممين نص لوريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم ", subText: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad")
+        return todayVerse
+    }
+    
     func cellForRowTimeTable() -> MainTimeTable? {
         if
             let prayerTimes = times,

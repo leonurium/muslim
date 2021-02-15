@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="188" id="FyY-iW-VR1" customClass="MainTodayVerseCell" customModule="muslim" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FyY-iW-VR1" id="GUg-gi-gZl">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-Qa-FQs">
+                        <rect key="frame" x="16" y="8" width="382" height="172"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bwo-Lh-Y2M">
+                                <rect key="frame" x="16" y="16" width="307" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCC-GD-K0P" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFw-pU-xq2" customClass="UIMLabelBody" customModule="muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28.5" width="307" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6v-e3-QJl" customClass="UIMButtonIcon" customModule="muslim" customModuleProvider="target">
+                                <rect key="frame" x="331" y="16" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="aF8-oH-Bok"/>
+                                    <constraint firstAttribute="height" constant="35" id="nGq-bC-cbU"/>
+                                </constraints>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-Fs-fbg">
+                                <rect key="frame" x="16" y="73" width="350" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="m0A-uq-J8m"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eTi-Cl-iXk">
+                                <rect key="frame" x="16" y="90" width="350" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnh-HC-N6K" customClass="UIMLabelTitle" customModule="muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEO-Bi-stM" customClass="UIMLabelBody" customModule="muslim" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28.5" width="350" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eTi-Cl-iXk" firstAttribute="top" secondItem="eRQ-Fs-fbg" secondAttribute="bottom" constant="16" id="4CQ-fU-guf"/>
+                            <constraint firstItem="I6v-e3-QJl" firstAttribute="top" secondItem="ABS-Qa-FQs" secondAttribute="top" constant="16" id="5pf-Ot-vVI"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eTi-Cl-iXk" secondAttribute="bottom" constant="16" id="6AX-Fl-HP8"/>
+                            <constraint firstAttribute="trailing" secondItem="I6v-e3-QJl" secondAttribute="trailing" constant="16" id="8h8-jI-jVK"/>
+                            <constraint firstItem="I6v-e3-QJl" firstAttribute="leading" secondItem="bwo-Lh-Y2M" secondAttribute="trailing" constant="8" id="LcG-oO-ARd"/>
+                            <constraint firstItem="bwo-Lh-Y2M" firstAttribute="top" secondItem="ABS-Qa-FQs" secondAttribute="top" constant="16" id="XM0-2U-9V6"/>
+                            <constraint firstItem="eRQ-Fs-fbg" firstAttribute="top" secondItem="bwo-Lh-Y2M" secondAttribute="bottom" constant="8" id="gS7-ck-oIs"/>
+                            <constraint firstAttribute="trailing" secondItem="eRQ-Fs-fbg" secondAttribute="trailing" constant="16" id="kX5-3R-4t0"/>
+                            <constraint firstItem="eRQ-Fs-fbg" firstAttribute="leading" secondItem="ABS-Qa-FQs" secondAttribute="leading" constant="16" id="n3O-dM-ttn"/>
+                            <constraint firstItem="bwo-Lh-Y2M" firstAttribute="leading" secondItem="ABS-Qa-FQs" secondAttribute="leading" constant="16" id="qJi-z2-DLf"/>
+                            <constraint firstAttribute="trailing" secondItem="eTi-Cl-iXk" secondAttribute="trailing" constant="16" id="uO9-xE-Izg"/>
+                            <constraint firstItem="eTi-Cl-iXk" firstAttribute="leading" secondItem="ABS-Qa-FQs" secondAttribute="leading" constant="16" id="xu2-7F-AMQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ABS-Qa-FQs" secondAttribute="trailing" constant="16" id="FDn-HU-bVw"/>
+                    <constraint firstItem="ABS-Qa-FQs" firstAttribute="leading" secondItem="GUg-gi-gZl" secondAttribute="leading" constant="16" id="QvI-XA-YOY"/>
+                    <constraint firstItem="ABS-Qa-FQs" firstAttribute="top" secondItem="GUg-gi-gZl" secondAttribute="top" constant="8" id="lYw-ps-F6t"/>
+                    <constraint firstAttribute="bottom" secondItem="ABS-Qa-FQs" secondAttribute="bottom" constant="8" id="mJK-kC-xA8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn_share" destination="I6v-e3-QJl" id="1lN-zJ-rEO"/>
+                <outlet property="container_stack_body" destination="eTi-Cl-iXk" id="yhW-Yg-nB7"/>
+                <outlet property="container_stack_header" destination="bwo-Lh-Y2M" id="IXM-90-9ha"/>
+                <outlet property="container_view" destination="ABS-Qa-FQs" id="LgD-Ys-a9e"/>
+                <outlet property="lbl_subtext" destination="aEO-Bi-stM" id="TcY-cA-AlF"/>
+                <outlet property="lbl_subtitle" destination="WFw-pU-xq2" id="BHg-j1-cDd"/>
+                <outlet property="lbl_text" destination="qnh-HC-N6K" id="AQo-8E-9dI"/>
+                <outlet property="lbl_title" destination="lCC-GD-K0P" id="RPf-XT-UwB"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="125.89285714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

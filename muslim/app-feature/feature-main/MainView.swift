@@ -56,6 +56,7 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.separatorStyle = .none
         tableview.register(MainClockCell.source.nib, forCellReuseIdentifier: MainClockCell.source.identifier)
         tableview.register(MainMenuCell.source.nib, forCellReuseIdentifier: MainMenuCell.source.identifier)
+        tableview.register(MainTodayVerseCell.source.nib, forCellReuseIdentifier: MainTodayVerseCell.source.identifier)
         tableview.register(MainTimeTableCell.source.nib, forCellReuseIdentifier: MainTimeTableCell.source.identifier)
         tableview.register(MainQiblaCell.source.nib, forCellReuseIdentifier: MainQiblaCell.source.identifier)
         
@@ -116,6 +117,13 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         
         if
             indexPath.row == 2,
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainTodayVerseCell.source.identifier) as? MainTodayVerseCell {
+            cell.data = presenter?.cellForRowTodayVerse()
+            return cell
+        }
+        
+        if
+            indexPath.row == 3,
             let cell = tableView.dequeueReusableCell(withIdentifier: MainTimeTableCell.source.identifier) as? MainTimeTableCell {
             cell.timeTable = presenter?.cellForRowTimeTable()
             cell.delegate = self
@@ -123,7 +131,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         }
         
         if
-            indexPath.row == 3,
+            indexPath.row == 4,
             let cell = tableView.dequeueReusableCell(withIdentifier: MainQiblaCell.source.identifier) as? MainQiblaCell {
             cell.qibla = presenter?.cellForRowQibla()
             return cell
