@@ -20,7 +20,7 @@ class MainPresenter: MainViewToPresenter {
     
     func didLoad() {
         view?.setupViews()
-        view?.showLoaderIndicator()
+//        view?.showLoaderIndicator()
         interactor?.requestData()
     }
     
@@ -84,6 +84,14 @@ class MainPresenter: MainViewToPresenter {
         }
         
         return currentMainClock
+    }
+    
+    func cellForRowMainMenu() -> [MainMenuItem] {
+        var menus: [MainMenuItem] = []
+        menus.append(MainMenuItem(icon: .btn_info, title: "Quran"))
+        menus.append(MainMenuItem(icon: .btn_info, title: "Qibla"))
+        menus.append(MainMenuItem(icon: .btn_info, title: "PrayTime"))
+        return menus
     }
     
     func cellForRowTimeTable() -> MainTimeTable? {

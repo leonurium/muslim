@@ -45,6 +45,7 @@ protocol MainViewToPresenter: class {
     func didLoad()
     func numberOfRowsInSection() -> Int
     func cellForRowClock() -> MainClock?
+    func cellForRowMainMenu() -> [MainMenuItem]
     func cellForRowTimeTable() -> MainTimeTable?
     func cellForRowQibla() -> MainQibla?
     func navigateToInfo()

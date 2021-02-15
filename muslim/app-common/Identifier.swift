@@ -33,3 +33,5 @@ enum Identifier {
         case adhan_mecca_1
     }
 }
+
+typealias IImageName = Identifier.ImageName

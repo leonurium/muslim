@@ -100,7 +100,7 @@ class MainTimeTableCell: UITableViewCell {
             if prayer.prayer == main.currentPrayer {
                 lbl_prayer.makeBold()
                 lbl_time.makeBold()
-                stack.backgroundColor = UIMColor.mine_shaft.get().withAlphaComponent(0.4)
+                stack.backgroundColor = UIMColor.brandColor().withAlphaComponent(0.4)
                 stack.layer.cornerRadius = 10
             }
             

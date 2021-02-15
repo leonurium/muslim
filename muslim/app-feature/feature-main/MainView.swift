@@ -45,6 +45,7 @@ class MainView: UIViewController, MainPresenterToView {
         let btn_info_image = UIImage(identifierName: .btn_info)?.withRenderingMode(.alwaysTemplate)
         btn_info.setIcon(image: btn_info_image)
         btn_info.setInset()
+        btn_info.setCornerRadius(radius: 5)
         btn_info.addTarget(self, action: #selector(didTapInfo), for: .touchUpInside)
         let btn_bar_info = UIBarButtonItem()
         btn_bar_info.customView = btn_info
@@ -54,6 +55,7 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.delegate = self
         tableview.separatorStyle = .none
         tableview.register(MainClockCell.source.nib, forCellReuseIdentifier: MainClockCell.source.identifier)
+        tableview.register(MainMenuCell.source.nib, forCellReuseIdentifier: MainMenuCell.source.identifier)
         tableview.register(MainTimeTableCell.source.nib, forCellReuseIdentifier: MainTimeTableCell.source.identifier)
         tableview.register(MainQiblaCell.source.nib, forCellReuseIdentifier: MainQiblaCell.source.identifier)
         
@@ -107,6 +109,13 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         
         if
             indexPath.row == 1,
+            let cell = tableView.dequeueReusableCell(withIdentifier: MainMenuCell.source.identifier) as? MainMenuCell {
+            cell.menus = presenter?.cellForRowMainMenu() ?? []
+            return cell
+        }
+        
+        if
+            indexPath.row == 2,
             let cell = tableView.dequeueReusableCell(withIdentifier: MainTimeTableCell.source.identifier) as? MainTimeTableCell {
             cell.timeTable = presenter?.cellForRowTimeTable()
             cell.delegate = self
@@ -114,7 +123,7 @@ extension MainView: UITableViewDelegate, UITableViewDataSource {
         }
         
         if
-            indexPath.row == 2,
+            indexPath.row == 3,
             let cell = tableView.dequeueReusableCell(withIdentifier: MainQiblaCell.source.identifier) as? MainQiblaCell {
             cell.qibla = presenter?.cellForRowQibla()
             return cell

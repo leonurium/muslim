@@ -18,12 +18,16 @@ class UIMButtonIcon: UIButton {
         setupViews()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupViews()
+    }
+    
     private func setupViews() {
         tintColor = UIMColor.brandColor()
         backgroundColor = UIMColor.secondBrandColor()
         contentVerticalAlignment = .fill
         contentHorizontalAlignment = .fill
-        layer.cornerRadius = 5
         layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0)
         layer.shadowRadius = 4
@@ -36,5 +40,9 @@ class UIMButtonIcon: UIButton {
     
     func setInset(insets: UIEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)) {
         imageEdgeInsets = insets
+    }
+    
+    func setCornerRadius(radius: CGFloat) {
+        layer.cornerRadius = radius
     }
 }
