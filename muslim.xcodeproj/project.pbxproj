@@ -131,7 +131,7 @@
 		AA16EDFA25BDCB5F007F77C9 /* QuranVerseDefaultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranVerseDefaultCell.xib; sourceTree = "<group>"; };
 		AA227C082581CFED00B205E5 /* MainQiblaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainQiblaCell.xib; sourceTree = "<group>"; };
 		AA227C0B2581CFFF00B205E5 /* MainQiblaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQiblaCell.swift; sourceTree = "<group>"; };
-		AA227C17258271FA00B205E5 /* LocalNotificationX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationX.swift; path = "muslim/app-settings/LocalNotificationX.swift"; sourceTree = SOURCE_ROOT; };
+		AA227C17258271FA00B205E5 /* LocalNotificationX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocalNotificationX.swift; path = "muslim/app-helper/Notification/LocalNotificationX.swift"; sourceTree = SOURCE_ROOT; };
 		AA504AED25B9D5E200CFAD60 /* QuranManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranManager.swift; sourceTree = "<group>"; };
 		AA686C9C258075CB00040110 /* Int+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Ext.swift"; sourceTree = "<group>"; };
 		AA686CA0258078F400040110 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -298,22 +298,6 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
-		AA227C15258271CD00B205E5 /* app-helper */ = {
-			isa = PBXGroup;
-			children = (
-				AA227C16258271DF00B205E5 /* LocalNotificationX */,
-			);
-			path = "app-helper";
-			sourceTree = "<group>";
-		};
-		AA227C16258271DF00B205E5 /* LocalNotificationX */ = {
-			isa = PBXGroup;
-			children = (
-				AA227C17258271FA00B205E5 /* LocalNotificationX.swift */,
-			);
-			path = LocalNotificationX;
-			sourceTree = "<group>";
-		};
 		AA686C9F258078DB00040110 /* app-settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +329,22 @@
 			path = Sound;
 			sourceTree = "<group>";
 		};
+		AA8A9D8325DC0EB600369077 /* app-helper */ = {
+			isa = PBXGroup;
+			children = (
+				AA8A9D8425DC0EC000369077 /* Notification */,
+			);
+			path = "app-helper";
+			sourceTree = "<group>";
+		};
+		AA8A9D8425DC0EC000369077 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				AA227C17258271FA00B205E5 /* LocalNotificationX.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		AA984BB5257E1B560008E31D = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +366,7 @@
 		AA984BC0257E1B560008E31D /* muslim */ = {
 			isa = PBXGroup;
 			children = (
-				AA227C15258271CD00B205E5 /* app-helper */,
+				AA8A9D8325DC0EB600369077 /* app-helper */,
 				AA686C9F258078DB00040110 /* app-settings */,
 				AA984C57257E66DD0008E31D /* app-muslimkit */,
 				AA984C4B257E630D0008E31D /* app-extension */,
