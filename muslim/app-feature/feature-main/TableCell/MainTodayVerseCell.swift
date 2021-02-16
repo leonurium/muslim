@@ -47,6 +47,7 @@ class MainTodayVerseCell: UITableViewCell {
     }
     
     private func setupViews() {
+        selectionStyle = .none
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         container_stack_header.backgroundColor = .clear

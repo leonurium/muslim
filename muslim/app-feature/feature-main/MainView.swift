@@ -54,7 +54,7 @@ class MainView: UIViewController, MainPresenterToView {
         tableview.dataSource = self
         tableview.delegate = self
         tableview.separatorStyle = .none
-        tableview.isScrollEnabled = false
+//        tableview.isScrollEnabled = false
         tableview.register(MainClockCell.source.nib, forCellReuseIdentifier: MainClockCell.source.identifier)
         tableview.register(MainMenuCell.source.nib, forCellReuseIdentifier: MainMenuCell.source.identifier)
         tableview.register(MainTodayVerseCell.source.nib, forCellReuseIdentifier: MainTodayVerseCell.source.identifier)
@@ -88,6 +88,12 @@ class MainView: UIViewController, MainPresenterToView {
     
     func updateTitle(title: String) {
         self.title = title
+    }
+    
+    func updateViewInteraction(enable: Bool) {
+        view.isUserInteractionEnabled = enable
+        debugLog("debug by leo")
+        debugLog(enable)
     }
     
     @objc

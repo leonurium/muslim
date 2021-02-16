@@ -9,12 +9,15 @@ import UIKit
 
 struct MainMenuItem {
     let icon: IImageName
-    let title: String
     let type: MainMenuType
 }
 
 enum MainMenuType: Int {
     case quran, qibla, praytime
+    
+    func getString() -> String {
+        String(describing: self).capitalized
+    }
 }
 
 protocol MainMenuItemCellDelegate: class {
@@ -64,7 +67,7 @@ class MainMenuItemCell: UICollectionViewCell {
         btnMenu.setInset(insets: UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12))
         btnMenu.setCornerRadius(radius: 10)
         btnMenu.addTarget(self, action: #selector(didTapMenu(_:)), for: .touchUpInside)
-        lbl_title.text = item?.title
+        lbl_title.text = item?.type.getString()
     }
     
     @objc private func didTapMenu(_ sender: UIMButtonIcon) {

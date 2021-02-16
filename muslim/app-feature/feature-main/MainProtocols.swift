@@ -17,6 +17,7 @@ protocol MainPresenterToView: class {
     func updateIntevalView(remaining: String)
     func updateQiblaView(angle: Double)
     func updateTitle(title: String)
+    func updateViewInteraction(enable: Bool)
     func didTapInfo()
     func showLoaderIndicator()
     func dismissLoaderIndicator()
@@ -32,6 +33,8 @@ protocol MainPresenterToInteractor: class {
 
 // MARK: Router -
 protocol MainPresenterToRouter: class {
+    var presenter: MainRouterToPresenter?  { get set }
+    
     static func createMainModule() -> UIViewController
     func navigateToInfo(from: MainPresenterToView?)
     func navigateToQuran(from: MainPresenterToView?)
@@ -63,4 +66,9 @@ protocol MainInteractorToPresenter: class {
     func failGetPrayerTimes(title: String, message: String)
     func failGetLocation(title: String, message: String)
     func didGetQiblaDirection(angle: Double)
+}
+
+protocol MainRouterToPresenter: class {
+    func didShowFloatingPanel()
+    func didRemoveFloatingPanel()
 }

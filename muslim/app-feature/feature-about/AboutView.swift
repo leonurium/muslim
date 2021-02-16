@@ -37,4 +37,8 @@ class AboutView: UIViewController, AboutPresenterToView {
     func updateContent(data: String) {
         lbl_content.text = data
     }
+    
+    @IBAction func didTapClose(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		71A50267299B7BF02B2636EE /* Pods_muslim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971E428D03E8A27E49315D8B /* Pods_muslim.framework */; };
+		8B47EE3D25DB78390097A654 /* QiblaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE3725DB78390097A654 /* QiblaPresenter.swift */; };
+		8B47EE3E25DB78390097A654 /* QiblaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE3825DB78390097A654 /* QiblaRouter.swift */; };
+		8B47EE3F25DB78390097A654 /* QiblaProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE3925DB78390097A654 /* QiblaProtocols.swift */; };
+		8B47EE4025DB78390097A654 /* QiblaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE3A25DB78390097A654 /* QiblaInteractor.swift */; };
+		8B47EE4125DB78390097A654 /* QiblaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE3B25DB78390097A654 /* QiblaView.swift */; };
+		8B47EE4225DB78390097A654 /* QiblaView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B47EE3C25DB78390097A654 /* QiblaView.xib */; };
+		8B47EE4B25DB7CCD0097A654 /* PrayerTimeTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE4525DB7CCD0097A654 /* PrayerTimeTablePresenter.swift */; };
+		8B47EE4C25DB7CCD0097A654 /* PrayerTimeTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE4625DB7CCD0097A654 /* PrayerTimeTableRouter.swift */; };
+		8B47EE4D25DB7CCD0097A654 /* PrayerTimeTableProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE4725DB7CCD0097A654 /* PrayerTimeTableProtocols.swift */; };
+		8B47EE4E25DB7CCD0097A654 /* PrayerTimeTableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE4825DB7CCD0097A654 /* PrayerTimeTableInteractor.swift */; };
+		8B47EE4F25DB7CCD0097A654 /* PrayerTimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B47EE4925DB7CCD0097A654 /* PrayerTimeTableView.swift */; };
+		8B47EE5025DB7CCD0097A654 /* PrayerTimeTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B47EE4A25DB7CCD0097A654 /* PrayerTimeTableView.xib */; };
 		8BAE40B925DA567800848CE0 /* MainTodayVerseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAE40B825DA567800848CE0 /* MainTodayVerseCell.swift */; };
 		8BAE40BB25DA568300848CE0 /* MainTodayVerseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAE40BA25DA568300848CE0 /* MainTodayVerseCell.xib */; };
 		AA03437A2585B460007DE320 /* CompositeAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0343792585B460007DE320 /* CompositeAppDelegate.swift */; };
@@ -86,6 +98,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B47EE3725DB78390097A654 /* QiblaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaPresenter.swift; sourceTree = "<group>"; };
+		8B47EE3825DB78390097A654 /* QiblaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaRouter.swift; sourceTree = "<group>"; };
+		8B47EE3925DB78390097A654 /* QiblaProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaProtocols.swift; sourceTree = "<group>"; };
+		8B47EE3A25DB78390097A654 /* QiblaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaInteractor.swift; sourceTree = "<group>"; };
+		8B47EE3B25DB78390097A654 /* QiblaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaView.swift; sourceTree = "<group>"; };
+		8B47EE3C25DB78390097A654 /* QiblaView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiblaView.xib; sourceTree = "<group>"; };
+		8B47EE4525DB7CCD0097A654 /* PrayerTimeTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeTablePresenter.swift; sourceTree = "<group>"; };
+		8B47EE4625DB7CCD0097A654 /* PrayerTimeTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeTableRouter.swift; sourceTree = "<group>"; };
+		8B47EE4725DB7CCD0097A654 /* PrayerTimeTableProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeTableProtocols.swift; sourceTree = "<group>"; };
+		8B47EE4825DB7CCD0097A654 /* PrayerTimeTableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeTableInteractor.swift; sourceTree = "<group>"; };
+		8B47EE4925DB7CCD0097A654 /* PrayerTimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeTableView.swift; sourceTree = "<group>"; };
+		8B47EE4A25DB7CCD0097A654 /* PrayerTimeTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerTimeTableView.xib; sourceTree = "<group>"; };
 		8BAE40B825DA567800848CE0 /* MainTodayVerseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTodayVerseCell.swift; sourceTree = "<group>"; };
 		8BAE40BA25DA568300848CE0 /* MainTodayVerseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTodayVerseCell.xib; sourceTree = "<group>"; };
 		971E428D03E8A27E49315D8B /* Pods_muslim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_muslim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +219,32 @@
 				971E428D03E8A27E49315D8B /* Pods_muslim.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B47EE3525DB78010097A654 /* feature-qibla */ = {
+			isa = PBXGroup;
+			children = (
+				8B47EE3725DB78390097A654 /* QiblaPresenter.swift */,
+				8B47EE3825DB78390097A654 /* QiblaRouter.swift */,
+				8B47EE3925DB78390097A654 /* QiblaProtocols.swift */,
+				8B47EE3A25DB78390097A654 /* QiblaInteractor.swift */,
+				8B47EE3B25DB78390097A654 /* QiblaView.swift */,
+				8B47EE3C25DB78390097A654 /* QiblaView.xib */,
+			);
+			path = "feature-qibla";
+			sourceTree = "<group>";
+		};
+		8B47EE3625DB78170097A654 /* feature-prayer-time */ = {
+			isa = PBXGroup;
+			children = (
+				8B47EE4525DB7CCD0097A654 /* PrayerTimeTablePresenter.swift */,
+				8B47EE4625DB7CCD0097A654 /* PrayerTimeTableRouter.swift */,
+				8B47EE4725DB7CCD0097A654 /* PrayerTimeTableProtocols.swift */,
+				8B47EE4825DB7CCD0097A654 /* PrayerTimeTableInteractor.swift */,
+				8B47EE4925DB7CCD0097A654 /* PrayerTimeTableView.swift */,
+				8B47EE4A25DB7CCD0097A654 /* PrayerTimeTableView.xib */,
+			);
+			path = "feature-prayer-time";
 			sourceTree = "<group>";
 		};
 		AA0343782585B449007DE320 /* Composite */ = {
@@ -346,6 +396,8 @@
 		AA984C0D257E35840008E31D /* app-feature */ = {
 			isa = PBXGroup;
 			children = (
+				8B47EE3625DB78170097A654 /* feature-prayer-time */,
+				8B47EE3525DB78010097A654 /* feature-qibla */,
 				AA16EDE725BDCAF4007F77C9 /* feature-quran-verse */,
 				AA6B576725B54ACE006A589A /* feature-quran */,
 				AA9C7E1025AAFC9D005A04AE /* feature-about */,
@@ -567,9 +619,11 @@
 				AA984C2B257E4CDE0008E31D /* LaunchScreen.storyboard in Resources */,
 				AA686CA72580980200040110 /* MainTimeTableCell.xib in Resources */,
 				AA99AB10257FCDF00050C92D /* Localizable.strings in Resources */,
+				8B47EE5025DB7CCD0097A654 /* PrayerTimeTableView.xib in Resources */,
 				AA16EDF325BDCB0E007F77C9 /* QuranVerseView.xib in Resources */,
 				AA984C52257E64EA0008E31D /* MainClockCell.xib in Resources */,
 				AAAE772425D9821E006B6F52 /* MainMenuCell.xib in Resources */,
+				8B47EE4225DB78390097A654 /* QiblaView.xib in Resources */,
 				AAAE772825D98444006B6F52 /* MainMenuItemCell.xib in Resources */,
 				AA984C2F257E4FD00008E31D /* GoogleService-Info.plist in Resources */,
 				AA984C1A257E35A90008E31D /* MainView.xib in Resources */,
@@ -647,11 +701,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA227C0C2581D00000B205E5 /* MainQiblaCell.swift in Sources */,
+				8B47EE3F25DB78390097A654 /* QiblaProtocols.swift in Sources */,
+				8B47EE4125DB78390097A654 /* QiblaView.swift in Sources */,
 				AA984C6E257E6F3E0008E31D /* UIMLabelNote.swift in Sources */,
 				AA16EDF125BDCB0E007F77C9 /* QuranVerseInteractor.swift in Sources */,
 				AA984C16257E35A90008E31D /* MainRouter.swift in Sources */,
 				AAAE76CC25D6C671006B6F52 /* UIView+Ext.swift in Sources */,
 				AA6B577025B54AE9006A589A /* QuranProtocols.swift in Sources */,
+				8B47EE3D25DB78390097A654 /* QiblaPresenter.swift in Sources */,
 				AA9C7E1725AB0E3B005A04AE /* AboutPresenter.swift in Sources */,
 				AA9C7E1825AB0E3B005A04AE /* AboutRouter.swift in Sources */,
 				AA686CAA2580980F00040110 /* MainTimeTableCell.swift in Sources */,
@@ -659,6 +716,7 @@
 				AAAE771E25D97C6E006B6F52 /* UIMButtonIcon.swift in Sources */,
 				AA984C4D257E63230008E31D /* UIimage+Ext.swift in Sources */,
 				AA16EDF225BDCB0E007F77C9 /* QuranVerseView.swift in Sources */,
+				8B47EE4F25DB7CCD0097A654 /* PrayerTimeTableView.swift in Sources */,
 				AA984C48257E62B70008E31D /* Identifier.swift in Sources */,
 				AA984C67257E693B0008E31D /* UIMColor.swift in Sources */,
 				AA9C7E1925AB0E3B005A04AE /* AboutProtocols.swift in Sources */,
@@ -669,12 +727,14 @@
 				AA984C74257E70350008E31D /* Debugger.swift in Sources */,
 				AA16EDEE25BDCB0E007F77C9 /* QuranVersePresenter.swift in Sources */,
 				AAA2575925B1D55D004B4B50 /* UIViewController+Ext.swift in Sources */,
+				8B47EE4025DB78390097A654 /* QiblaInteractor.swift in Sources */,
 				AA0343842585BA24007DE320 /* SceneDelegates.swift in Sources */,
 				AA984C19257E35A90008E31D /* MainView.swift in Sources */,
 				AA984C23257E38B50008E31D /* SceneDelegate.swift in Sources */,
 				AA984C17257E35A90008E31D /* MainProtocols.swift in Sources */,
 				8BAE40B925DA567800848CE0 /* MainTodayVerseCell.swift in Sources */,
 				AA984C55257E64F50008E31D /* MainClockCell.swift in Sources */,
+				8B47EE4C25DB7CCD0097A654 /* PrayerTimeTableRouter.swift in Sources */,
 				AA984BC2257E1B560008E31D /* AppDelegate.swift in Sources */,
 				AA984C18257E35A90008E31D /* MainInteractor.swift in Sources */,
 				AA03437A2585B460007DE320 /* CompositeAppDelegate.swift in Sources */,
@@ -686,12 +746,14 @@
 				AA03437E2585B659007DE320 /* AppDelegates.swift in Sources */,
 				AA984C60257E68650008E31D /* UIMLabelTitle.swift in Sources */,
 				AA99AAFF257FC50C0050C92D /* MuslimPrayerTimes.swift in Sources */,
+				8B47EE4D25DB7CCD0097A654 /* PrayerTimeTableProtocols.swift in Sources */,
 				AA16EDE125BD6E27007F77C9 /* QuranDefaultCell.swift in Sources */,
 				AA984C5C257E67400008E31D /* UIMFont.swift in Sources */,
 				AA9C7E1B25AB0E3B005A04AE /* AboutView.swift in Sources */,
 				AA0343812585B79F007DE320 /* CompositeSceneDelegate.swift in Sources */,
 				AA6B576E25B54AE9006A589A /* QuranPresenter.swift in Sources */,
 				AA984C63257E69100008E31D /* UIMLabelBody.swift in Sources */,
+				8B47EE3E25DB78390097A654 /* QiblaRouter.swift in Sources */,
 				AA984C71257E700E0008E31D /* UIColor+Ext.swift in Sources */,
 				AA9C7E1A25AB0E3B005A04AE /* AboutInteractor.swift in Sources */,
 				AA16EDF025BDCB0E007F77C9 /* QuranVerseProtocols.swift in Sources */,
@@ -701,8 +763,10 @@
 				AA16EDF725BDCB53007F77C9 /* QuranVerseDefaultCell.swift in Sources */,
 				AA6B577225B54AE9006A589A /* QuranView.swift in Sources */,
 				AA99AB06257FC9500050C92D /* LocalizableDelegate.swift in Sources */,
+				8B47EE4B25DB7CCD0097A654 /* PrayerTimeTablePresenter.swift in Sources */,
 				AA03438C25861FE5007DE320 /* AppLifecycleMediator.swift in Sources */,
 				AA686C9D258075CB00040110 /* Int+Ext.swift in Sources */,
+				8B47EE4E25DB7CCD0097A654 /* PrayerTimeTableInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -88,14 +88,14 @@ class MainPresenter: MainViewToPresenter {
     
     func cellForRowMainMenu() -> [MainMenuItem] {
         var menus: [MainMenuItem] = []
-        menus.append(MainMenuItem(icon: .icon_quran, title: String(describing: MainMenuType.quran.self).capitalized, type: .quran))
-        menus.append(MainMenuItem(icon: .icon_qibla, title: String(describing: MainMenuType.qibla.self).capitalized, type: .qibla))
-        menus.append(MainMenuItem(icon: .icon_time, title: String(describing: MainMenuType.praytime.self).capitalized, type: .praytime))
+        menus.append(MainMenuItem(icon: .icon_quran, type: .quran))
+        menus.append(MainMenuItem(icon: .icon_qibla, type: .qibla))
+        menus.append(MainMenuItem(icon: .icon_time, type: .praytime))
         return menus
     }
     
     func cellForRowTodayVerse() -> MainTodayVerse? {
-        var todayVerse: MainTodayVerse = MainTodayVerse(title: "Today Verse", subTitle: "Al-Baqarah (12:118)", text: "للمصممين نص لوريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم ", subText: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad")
+        let todayVerse: MainTodayVerse = MainTodayVerse(title: "Today Verse", subTitle: "Al-Baqarah (12:118)", text: "للمصممين نص لوريم ايبسوم بالعربي عربي انجليزي لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم ", subText: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad")
         return todayVerse
     }
     
@@ -173,11 +173,11 @@ class MainPresenter: MainViewToPresenter {
     }
     
     func navigateToQibla() {
-        debugLog(2)
+        router?.navigateToQibla(from: view)
     }
     
     func navigateToPraytime() {
-        debugLog(3)
+        router?.navigateToPraytime(from: view)
     }
     
     @objc func didChangeTimeInterval() {
@@ -225,4 +225,14 @@ extension MainPresenter: MainInteractorToPresenter {
         view?.dismissLoaderIndicator()
         view?.updateQiblaView(angle: angle)
     }
+}
+
+extension MainPresenter: MainRouterToPresenter {
+    func didShowFloatingPanel() {
+        view?.updateViewInteraction(enable: false)
+    }
+    
+    func didRemoveFloatingPanel() {
+        view?.updateViewInteraction(enable: true)
+    }    
 }
