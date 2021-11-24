@@ -51,9 +51,9 @@ class QuranView: UIViewController, QuranPresenterToView {
     }
     
     func showAlertConfirm(title: String, message: String, okCompletion: (() -> Void)?, cancleCompletion: (() -> Void)?) {
-        super.showAlertConfirm(title: title, message: message) { (act) in
+        super.showAlertConfirm(title: title, message: message, OKCompletion: { (act) in
             okCompletion?()
-        } CancelCompletion: { (act) in
+        }) { (act) in
             cancleCompletion?()
         }
     }

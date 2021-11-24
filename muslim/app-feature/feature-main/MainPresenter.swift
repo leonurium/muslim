@@ -20,7 +20,7 @@ class MainPresenter: MainViewToPresenter {
     
     func didLoad() {
         view?.setupViews()
-//        view?.showLoaderIndicator()
+        view?.showLoaderIndicator()
         interactor?.requestData()
     }
     
